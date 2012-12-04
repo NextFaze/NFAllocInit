@@ -1,0 +1,266 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7C08B028166DD01000012AA1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C08B027166DD01000012AA1 /* QuartzCore.framework */; };
+		7C08B02A166DD01F00012AA1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C08B029166DD01F00012AA1 /* CoreData.framework */; };
+		7C08B02C166DD02800012AA1 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C08B02B166DD02800012AA1 /* CoreImage.framework */; };
+		7C08B02E166DD03100012AA1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C08B02D166DD03100012AA1 /* CoreGraphics.framework */; };
+		7CEFCDC2166DCB7500B0FB6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CEFCDC1166DCB7500B0FB6A /* Foundation.framework */; };
+		7CEFCE37166DCDA400B0FB6A /* NFResourceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CEFCE34166DCDA400B0FB6A /* NFResourceUtils.m */; };
+		7CEFCE38166DCDA400B0FB6A /* NFViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CEFCE36166DCDA400B0FB6A /* NFViewUtils.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7CEFCDBC166DCB7500B0FB6A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7C08B026166DCDE100012AA1 /* NFDebugging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFDebugging.h; sourceTree = "<group>"; };
+		7C08B027166DD01000012AA1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		7C08B029166DD01F00012AA1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7C08B02B166DD02800012AA1 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		7C08B02D166DD03100012AA1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7CEFCDBE166DCB7500B0FB6A /* libNFAllocInit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNFAllocInit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CEFCDC1166DCB7500B0FB6A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7CEFCDC5166DCB7500B0FB6A /* NFAllocInit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NFAllocInit-Prefix.pch"; sourceTree = "<group>"; };
+		7CEFCE33166DCDA400B0FB6A /* NFResourceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFResourceUtils.h; sourceTree = "<group>"; };
+		7CEFCE34166DCDA400B0FB6A /* NFResourceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFResourceUtils.m; sourceTree = "<group>"; };
+		7CEFCE35166DCDA400B0FB6A /* NFViewUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFViewUtils.h; sourceTree = "<group>"; };
+		7CEFCE36166DCDA400B0FB6A /* NFViewUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFViewUtils.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7CEFCDBB166DCB7500B0FB6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C08B02E166DD03100012AA1 /* CoreGraphics.framework in Frameworks */,
+				7C08B02C166DD02800012AA1 /* CoreImage.framework in Frameworks */,
+				7C08B02A166DD01F00012AA1 /* CoreData.framework in Frameworks */,
+				7C08B028166DD01000012AA1 /* QuartzCore.framework in Frameworks */,
+				7CEFCDC2166DCB7500B0FB6A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7CEFCDB3166DCB7500B0FB6A = {
+			isa = PBXGroup;
+			children = (
+				7CEFCDC3166DCB7500B0FB6A /* NFAllocInit */,
+				7CEFCDC0166DCB7500B0FB6A /* Frameworks */,
+				7CEFCDBF166DCB7500B0FB6A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7CEFCDBF166DCB7500B0FB6A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7CEFCDBE166DCB7500B0FB6A /* libNFAllocInit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7CEFCDC0166DCB7500B0FB6A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C08B029166DD01F00012AA1 /* CoreData.framework */,
+				7C08B02D166DD03100012AA1 /* CoreGraphics.framework */,
+				7C08B02B166DD02800012AA1 /* CoreImage.framework */,
+				7CEFCDC1166DCB7500B0FB6A /* Foundation.framework */,
+				7C08B027166DD01000012AA1 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7CEFCDC3166DCB7500B0FB6A /* NFAllocInit */ = {
+			isa = PBXGroup;
+			children = (
+				7C08B026166DCDE100012AA1 /* NFDebugging.h */,
+				7CEFCE33166DCDA400B0FB6A /* NFResourceUtils.h */,
+				7CEFCE34166DCDA400B0FB6A /* NFResourceUtils.m */,
+				7CEFCE35166DCDA400B0FB6A /* NFViewUtils.h */,
+				7CEFCE36166DCDA400B0FB6A /* NFViewUtils.m */,
+				7CEFCDC4166DCB7500B0FB6A /* Supporting Files */,
+			);
+			path = NFAllocInit;
+			sourceTree = "<group>";
+		};
+		7CEFCDC4166DCB7500B0FB6A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7CEFCDC5166DCB7500B0FB6A /* NFAllocInit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7CEFCDBD166DCB7500B0FB6A /* NFAllocInit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CEFCDCC166DCB7500B0FB6A /* Build configuration list for PBXNativeTarget "NFAllocInit" */;
+			buildPhases = (
+				7CEFCDBA166DCB7500B0FB6A /* Sources */,
+				7CEFCDBB166DCB7500B0FB6A /* Frameworks */,
+				7CEFCDBC166DCB7500B0FB6A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NFAllocInit;
+			productName = NFAllocInit;
+			productReference = 7CEFCDBE166DCB7500B0FB6A /* libNFAllocInit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7CEFCDB5166DCB7500B0FB6A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "NextFaze SD";
+			};
+			buildConfigurationList = 7CEFCDB8166DCB7500B0FB6A /* Build configuration list for PBXProject "NFAllocInit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7CEFCDB3166DCB7500B0FB6A;
+			productRefGroup = 7CEFCDBF166DCB7500B0FB6A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7CEFCDBD166DCB7500B0FB6A /* NFAllocInit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7CEFCDBA166DCB7500B0FB6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CEFCE37166DCDA400B0FB6A /* NFResourceUtils.m in Sources */,
+				7CEFCE38166DCDA400B0FB6A /* NFViewUtils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7CEFCDCA166DCB7500B0FB6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7CEFCDCB166DCB7500B0FB6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7CEFCDCD166DCB7500B0FB6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/NFAllocInit.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NFAllocInit/NFAllocInit-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7CEFCDCE166DCB7500B0FB6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/NFAllocInit.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NFAllocInit/NFAllocInit-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7CEFCDB8166DCB7500B0FB6A /* Build configuration list for PBXProject "NFAllocInit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CEFCDCA166DCB7500B0FB6A /* Debug */,
+				7CEFCDCB166DCB7500B0FB6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7CEFCDCC166DCB7500B0FB6A /* Build configuration list for PBXNativeTarget "NFAllocInit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CEFCDCD166DCB7500B0FB6A /* Debug */,
+				7CEFCDCE166DCB7500B0FB6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7CEFCDB5166DCB7500B0FB6A /* Project object */;
+}
