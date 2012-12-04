@@ -34,6 +34,7 @@
 		7C08B029166DD01F00012AA1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7C08B02B166DD02800012AA1 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		7C08B02D166DD03100012AA1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7CAAE519166EAF280070636C /* NFAllocInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFAllocInit.h; sourceTree = "<group>"; };
 		7CEFCDBE166DCB7500B0FB6A /* libNFAllocInit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNFAllocInit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CEFCDC1166DCB7500B0FB6A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7CEFCDC5166DCB7500B0FB6A /* NFAllocInit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NFAllocInit-Prefix.pch"; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 		7CEFCDC3166DCB7500B0FB6A /* NFAllocInit */ = {
 			isa = PBXGroup;
 			children = (
+				7CAAE519166EAF280070636C /* NFAllocInit.h */,
 				7C08B026166DCDE100012AA1 /* NFDebugging.h */,
 				7CEFCE33166DCDA400B0FB6A /* NFResourceUtils.h */,
 				7CEFCE34166DCDA400B0FB6A /* NFResourceUtils.m */,
