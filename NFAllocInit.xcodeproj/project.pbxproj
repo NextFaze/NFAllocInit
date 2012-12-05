@@ -11,6 +11,14 @@
 		7C08B02A166DD01F00012AA1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C08B029166DD01F00012AA1 /* CoreData.framework */; };
 		7C08B02C166DD02800012AA1 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C08B02B166DD02800012AA1 /* CoreImage.framework */; };
 		7C08B02E166DD03100012AA1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C08B02D166DD03100012AA1 /* CoreGraphics.framework */; };
+		7CAAE54F166EB8EF0070636C /* NSArray+FTW.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE540166EB8EF0070636C /* NSArray+FTW.m */; };
+		7CAAE550166EB8EF0070636C /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE542166EB8EF0070636C /* NSData+Base64.m */; };
+		7CAAE551166EB8EF0070636C /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE544166EB8EF0070636C /* NSString+Additions.m */; };
+		7CAAE552166EB8EF0070636C /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE546166EB8EF0070636C /* UIImage+Alpha.m */; };
+		7CAAE553166EB8EF0070636C /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE548166EB8EF0070636C /* UIImage+Resize.m */; };
+		7CAAE554166EB8EF0070636C /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE54A166EB8EF0070636C /* UIImage+RoundedCorner.m */; };
+		7CAAE555166EB8EF0070636C /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE54C166EB8EF0070636C /* UIView+Additions.m */; };
+		7CAAE556166EB8EF0070636C /* UIView+FrameAdjustments.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE54E166EB8EF0070636C /* UIView+FrameAdjustments.m */; };
 		7CEFCDC2166DCB7500B0FB6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CEFCDC1166DCB7500B0FB6A /* Foundation.framework */; };
 		7CEFCE37166DCDA400B0FB6A /* NFResourceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CEFCE34166DCDA400B0FB6A /* NFResourceUtils.m */; };
 		7CEFCE38166DCDA400B0FB6A /* NFViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CEFCE36166DCDA400B0FB6A /* NFViewUtils.m */; };
@@ -35,6 +43,23 @@
 		7C08B02B166DD02800012AA1 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		7C08B02D166DD03100012AA1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		7CAAE519166EAF280070636C /* NFAllocInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFAllocInit.h; sourceTree = "<group>"; };
+		7CAAE53F166EB8EF0070636C /* NSArray+FTW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+FTW.h"; sourceTree = "<group>"; };
+		7CAAE540166EB8EF0070636C /* NSArray+FTW.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FTW.m"; sourceTree = "<group>"; };
+		7CAAE541166EB8EF0070636C /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		7CAAE542166EB8EF0070636C /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		7CAAE543166EB8EF0070636C /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		7CAAE544166EB8EF0070636C /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
+		7CAAE545166EB8EF0070636C /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
+		7CAAE546166EB8EF0070636C /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
+		7CAAE547166EB8EF0070636C /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		7CAAE548166EB8EF0070636C /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		7CAAE549166EB8EF0070636C /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
+		7CAAE54A166EB8EF0070636C /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
+		7CAAE54B166EB8EF0070636C /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
+		7CAAE54C166EB8EF0070636C /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
+		7CAAE54D166EB8EF0070636C /* UIView+FrameAdjustments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameAdjustments.h"; sourceTree = "<group>"; };
+		7CAAE54E166EB8EF0070636C /* UIView+FrameAdjustments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameAdjustments.m"; sourceTree = "<group>"; };
+		7CAAE68F166F0E400070636C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		7CEFCDBE166DCB7500B0FB6A /* libNFAllocInit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNFAllocInit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CEFCDC1166DCB7500B0FB6A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7CEFCDC5166DCB7500B0FB6A /* NFAllocInit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NFAllocInit-Prefix.pch"; sourceTree = "<group>"; };
@@ -60,9 +85,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7CAAE53E166EB8EF0070636C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				7CAAE53F166EB8EF0070636C /* NSArray+FTW.h */,
+				7CAAE540166EB8EF0070636C /* NSArray+FTW.m */,
+				7CAAE541166EB8EF0070636C /* NSData+Base64.h */,
+				7CAAE542166EB8EF0070636C /* NSData+Base64.m */,
+				7CAAE543166EB8EF0070636C /* NSString+Additions.h */,
+				7CAAE544166EB8EF0070636C /* NSString+Additions.m */,
+				7CAAE545166EB8EF0070636C /* UIImage+Alpha.h */,
+				7CAAE546166EB8EF0070636C /* UIImage+Alpha.m */,
+				7CAAE547166EB8EF0070636C /* UIImage+Resize.h */,
+				7CAAE548166EB8EF0070636C /* UIImage+Resize.m */,
+				7CAAE549166EB8EF0070636C /* UIImage+RoundedCorner.h */,
+				7CAAE54A166EB8EF0070636C /* UIImage+RoundedCorner.m */,
+				7CAAE54B166EB8EF0070636C /* UIView+Additions.h */,
+				7CAAE54C166EB8EF0070636C /* UIView+Additions.m */,
+				7CAAE54D166EB8EF0070636C /* UIView+FrameAdjustments.h */,
+				7CAAE54E166EB8EF0070636C /* UIView+FrameAdjustments.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		7CEFCDB3166DCB7500B0FB6A = {
 			isa = PBXGroup;
 			children = (
+				7CAAE68F166F0E400070636C /* README.md */,
 				7CEFCDC3166DCB7500B0FB6A /* NFAllocInit */,
 				7CEFCDC0166DCB7500B0FB6A /* Frameworks */,
 				7CEFCDBF166DCB7500B0FB6A /* Products */,
@@ -98,6 +147,7 @@
 				7CEFCE34166DCDA400B0FB6A /* NFResourceUtils.m */,
 				7CEFCE35166DCDA400B0FB6A /* NFViewUtils.h */,
 				7CEFCE36166DCDA400B0FB6A /* NFViewUtils.m */,
+				7CAAE53E166EB8EF0070636C /* Categories */,
 				7CEFCDC4166DCB7500B0FB6A /* Supporting Files */,
 			);
 			path = NFAllocInit;
@@ -164,6 +214,14 @@
 			files = (
 				7CEFCE37166DCDA400B0FB6A /* NFResourceUtils.m in Sources */,
 				7CEFCE38166DCDA400B0FB6A /* NFViewUtils.m in Sources */,
+				7CAAE54F166EB8EF0070636C /* NSArray+FTW.m in Sources */,
+				7CAAE550166EB8EF0070636C /* NSData+Base64.m in Sources */,
+				7CAAE551166EB8EF0070636C /* NSString+Additions.m in Sources */,
+				7CAAE552166EB8EF0070636C /* UIImage+Alpha.m in Sources */,
+				7CAAE553166EB8EF0070636C /* UIImage+Resize.m in Sources */,
+				7CAAE554166EB8EF0070636C /* UIImage+RoundedCorner.m in Sources */,
+				7CAAE555166EB8EF0070636C /* UIView+Additions.m in Sources */,
+				7CAAE556166EB8EF0070636C /* UIView+FrameAdjustments.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
