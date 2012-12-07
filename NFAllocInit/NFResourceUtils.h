@@ -7,7 +7,8 @@
 #import <Foundation/Foundation.h>
 
 typedef enum {
-    FileTypeImage,
+    FileTypePNG,
+    FileTypeJPG,
     FileTypeVideo,
     FileTypePDF,
     FileTypePlist, // FileTypeXML ?
@@ -19,5 +20,7 @@ typedef enum {
 @interface NFResourceUtils : NSObject
 
 + (FileType)determineFileType:(NSString *)fileName;
++ (void)saveImage:(UIImage *)image withFileName:(NSString *)imageName;
++ (UIImage *)loadImage:(NSString *)fileName;
 
 @end

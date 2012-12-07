@@ -19,12 +19,10 @@
     if  ([extension isEqualToString:@"pdf"])
         result = FileTypePDF;
     else if ([extension isEqualToString:@"jpg"] ||
-        [extension isEqualToString:@"jpeg"] ||
-        [extension isEqualToString:@"png"] ||
-        [extension isEqualToString:@"bmp"] ||
-        [extension isEqualToString:@"jng"] ||
-        [extension isEqualToString:@"gif"])
-        result = FileTypeImage;
+        [extension isEqualToString:@"jpeg"])
+        result = FileTypeJPG;
+    else if ([extension isEqualToString:@"png"])
+        result = FileTypePNG;
     else if ([extension isEqualToString:@"mov"] ||
              [extension isEqualToString:@"m4v"] ||
              [extension isEqualToString:@"avi"] ||
@@ -43,5 +41,46 @@
 
     return result;
 }
+
++ (NSString *)documentPath
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    
+    return documentsDirectory;
+}
+
++ (NSString *)imagesPath
+{
+    NSString *documentsDirectory = [self documentPath];
+    documentsDirectory = [documentsDirectory stringByAppendingPathComponent:@"photos"];
+    
+    NSError *error;
+    [[NSFileManager defaultManager] createDirectoryAtPath:documentsDirectory withIntermediateDirectories:YES attributes:nil error:&error];
+    
+    return documentsDirectory;
+}
+
++ (void)saveImage:(UIImage *)image withFileName:(NSString *)fileName
+{
+    NSString *docPath = [self imagesPath];
+    
+    FileType fileType = [self determineFileType:fileName];
+    
+    if (fileType == FileTypePNG) {
+        [UIImagePNGRepresentation(image) writeToFile:[docPath stringByAppendingPathComponent:fileName] options:NSAtomicWrite error:nil];
+    } else if (fileType == FileTypeJPG) {
+        [UIImageJPEGRepresentation(image, 1.0) writeToFile:[docPath stringByAppendingPathComponent:fileName] options:NSAtomicWrite error:nil];
+    } else {
+        NSLog(@"Image Save Failed: Use PNG or JPG");
+    }
+}
+
++ (UIImage *)loadImage:(NSString *)fileName
+{
+    NSString *fullImagePath = [[self imagesPath] stringByAppendingPathComponent:fileName];
+    return [UIImage imageWithContentsOfFile:fullImagePath];
+}
+
 
 @end
