@@ -7,6 +7,8 @@
 // use this to set different background colours or other debug helpers for view layout
 #define VIEW_DEBUG 0
 
+#define kPadding 20
+
 @interface NFViewUtils : NSObject {
     
 }
