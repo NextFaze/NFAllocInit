@@ -1,7 +1,7 @@
 //
 //  NFViewUtils.m
 //
-//  Copyright 2012 NextFaze. All rights reserved.
+//  Copyright 2012-2013 NextFaze. All rights reserved.
 //
 
 #import "NFViewUtils.h"
@@ -35,23 +35,6 @@
     }
 }
 
-+ (UIFont *)fontRegularWithSize:(float)size
-{
-    return [UIFont fontWithName:@"Helvetica" size:size];
-}
-
-+ (UIFont *)fontBoldWithSize:(float)size
-{
-    return [UIFont fontWithName:@"Helvetica-Bold" size:size];
-}
-
-+ (UIFont *)randomFontWithSize:(float)size
-{
-    NSArray *families = [UIFont familyNames];
-    NSArray *fonts = [UIFont fontNamesForFamilyName:[families objectAtIndex:arc4random() % [families count]]];
-    return [UIFont fontWithName:[fonts objectAtIndex:arc4random() % [fonts count]] size:size];
-}
-
 + (UIColor *)randomColor
 {
     return [self randomColorWithAlpha:1.0];
@@ -66,41 +49,29 @@
     return [UIColor colorWithRed:randR green:randG blue:randB alpha:alpha];
 }
 
-+ (UIColor *)navBarColor
++ (UIImage *)imageWithColor:(UIColor *)color andSize:(CGSize)size
 {
-    float grey = 31.0/255.0;
-    return [UIColor colorWithRed:grey green:grey blue:grey alpha:0.9];
+    //Create a context of the appropriate size
+    UIGraphicsBeginImageContext(size);
+    CGContextRef currentContext = UIGraphicsGetCurrentContext();
+    
+    //Build a rect of appropriate size at origin 0,0
+    CGRect fillRect = CGRectMake(0,0,size.width,size.height);
+    
+    //Set the fill color
+    CGContextSetFillColorWithColor(currentContext, color.CGColor);
+    
+    //Fill the color
+    CGContextFillRect(currentContext, fillRect);
+    
+    //Snap the picture and close the context
+    UIImage *retval = UIGraphicsGetImageFromCurrentImageContext();
+    //UIGraphicsGetImageFromCurrentImageContext(void);
+    UIGraphicsEndImageContext();
+    
+    return retval;
 }
 
-+ (UIColor *)tabColor
-{
-    float grey = 31.0/255.0;
-    return [UIColor colorWithRed:grey green:grey blue:grey alpha:1.0];
-}
-
-+ (UIColor *)lightGrayTextColor
-{
-    float grey = 206.0/255.0;
-    return [UIColor colorWithRed:grey green:grey blue:grey alpha:1.0];
-}
-
-+ (UIColor *)grayTextColor
-{
-    float grey = 73.0/255.0;
-    return [UIColor colorWithRed:grey green:grey blue:grey alpha:1.0];
-}
-
-+ (UIColor *)darkGrayTextColor
-{
-    float grey = 43.0/255.0;
-    return [UIColor colorWithRed:grey green:grey blue:grey alpha:1.0];
-}
-
-+ (UIColor *)grayBackgroundColor
-{
-    float grey = 210.0/255.0;
-    return [UIColor colorWithRed:grey green:grey blue:grey alpha:1.0];
-}
 
 + (void) setDefaultStyleForLabel:(UILabel*)pLabel
 {

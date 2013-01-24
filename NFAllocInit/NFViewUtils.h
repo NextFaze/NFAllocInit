@@ -7,7 +7,13 @@
 // use this to set different background colours or other debug helpers for view layout
 #define VIEW_DEBUG 0
 
-#define kPadding 20
+#define UIColorFromRGB(rgbValue) [UIColor \
+colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+#define kPadding 20.0
+#define kHalfPadding kPadding/2.0
 
 @interface NFViewUtils : NSObject {
     
@@ -15,18 +21,10 @@
 
 + (void)printAvailableFonts;
 
-+ (UIFont *)fontRegularWithSize:(float)size;
-+ (UIFont *)fontBoldWithSize:(float)size;
-+ (UIFont *)randomFontWithSize:(float)size;
-
 + (UIColor *)randomColor;
 + (UIColor *)randomColorWithAlpha:(float)alpha;
-+ (UIColor *)navBarColor;
-+ (UIColor *)tabColor;
-+ (UIColor *)lightGrayTextColor;
-+ (UIColor *)grayTextColor;
-+ (UIColor *)darkGrayTextColor;
-+ (UIColor *)grayBackgroundColor;
+
++ (UIImage *)imageWithColor:(UIColor *)color andSize:(CGSize)size;
 
 + (void) setDefaultStyleForLabel:(UILabel*)pLabel;
 

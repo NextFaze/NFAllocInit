@@ -11,3 +11,12 @@
 #else
     #define NFLog(format, ...) ; // null statement
 #endif
+
+static void ShowAlertWithError(NSError *error)
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                    message:[error localizedDescription]
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
+}
