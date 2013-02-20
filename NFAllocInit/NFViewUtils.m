@@ -17,6 +17,25 @@
 
 @implementation NFViewUtils
 
+#pragma mark - Alerts
+
++ (void)showAlertWithTitle:(NSString *)title andMessage:(NSString *)message
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
+                                                        message:message
+                                                       delegate:nil
+                                              cancelButtonTitle:nil
+                                              otherButtonTitles:@"OK", nil];
+        [alert show];
+    });
+}
+
++ (void)showAlertWithError:(NSError *)error
+{
+    [NFViewUtils showAlertWithTitle:@"An error occured" andMessage:error.localizedDescription];
+}
+
 + (void)printAvailableFonts
 {
     NSArray *familyNames = [[NSArray alloc] initWithArray:[UIFont familyNames]];

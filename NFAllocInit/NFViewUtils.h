@@ -19,6 +19,9 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     
 }
 
++ (void)showAlertWithTitle:(NSString *)title andMessage:(NSString *)message;
++ (void)showAlertWithError:(NSError *)error;
+
 + (void)printAvailableFonts;
 
 + (UIColor *)randomColor;
