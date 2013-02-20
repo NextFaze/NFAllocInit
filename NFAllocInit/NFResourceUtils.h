@@ -23,4 +23,6 @@ typedef enum {
 + (void)saveImage:(UIImage *)image withFileName:(NSString *)imageName;
 + (UIImage *)loadImage:(NSString *)fileName;
 
++ (BOOL)isValidEmailAddress:(NSString *)emailAddress;
+
 @end
