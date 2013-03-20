@@ -11,6 +11,7 @@
 		7C08B02A166DD01F00012AA1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C08B029166DD01F00012AA1 /* CoreData.framework */; };
 		7C08B02C166DD02800012AA1 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C08B02B166DD02800012AA1 /* CoreImage.framework */; };
 		7C08B02E166DD03100012AA1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C08B02D166DD03100012AA1 /* CoreGraphics.framework */; };
+		7CA179D916F981D100841703 /* NFDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA179D816F981D100841703 /* NFDateUtils.m */; };
 		7CAAE54F166EB8EF0070636C /* NSArray+FTW.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE540166EB8EF0070636C /* NSArray+FTW.m */; };
 		7CAAE550166EB8EF0070636C /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE542166EB8EF0070636C /* NSData+Base64.m */; };
 		7CAAE551166EB8EF0070636C /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE544166EB8EF0070636C /* NSString+Additions.m */; };
@@ -42,6 +43,8 @@
 		7C08B029166DD01F00012AA1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7C08B02B166DD02800012AA1 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		7C08B02D166DD03100012AA1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7CA179D716F981D100841703 /* NFDateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFDateUtils.h; sourceTree = "<group>"; };
+		7CA179D816F981D100841703 /* NFDateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFDateUtils.m; sourceTree = "<group>"; };
 		7CAAE519166EAF280070636C /* NFAllocInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFAllocInit.h; sourceTree = "<group>"; };
 		7CAAE53F166EB8EF0070636C /* NSArray+FTW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+FTW.h"; sourceTree = "<group>"; };
 		7CAAE540166EB8EF0070636C /* NSArray+FTW.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FTW.m"; sourceTree = "<group>"; };
@@ -147,6 +150,8 @@
 				7CEFCE34166DCDA400B0FB6A /* NFResourceUtils.m */,
 				7CEFCE35166DCDA400B0FB6A /* NFViewUtils.h */,
 				7CEFCE36166DCDA400B0FB6A /* NFViewUtils.m */,
+				7CA179D716F981D100841703 /* NFDateUtils.h */,
+				7CA179D816F981D100841703 /* NFDateUtils.m */,
 				7CAAE53E166EB8EF0070636C /* Categories */,
 				7CEFCDC4166DCB7500B0FB6A /* Supporting Files */,
 			);
@@ -222,6 +227,7 @@
 				7CAAE554166EB8EF0070636C /* UIImage+RoundedCorner.m in Sources */,
 				7CAAE555166EB8EF0070636C /* UIView+Additions.m in Sources */,
 				7CAAE556166EB8EF0070636C /* UIView+FrameAdjustments.m in Sources */,
+				7CA179D916F981D100841703 /* NFDateUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

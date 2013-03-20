@@ -82,6 +82,20 @@
     return [UIImage imageWithContentsOfFile:fullImagePath];
 }
 
++ (BOOL)deleteImage:(NSString *)fileName
+{
+    NSFileManager *fileManager = [[NSFileManager alloc] init];
+    NSError *fileError;
+    NSString *filePath = [[self imagesPath] stringByAppendingPathComponent:fileName];
+    BOOL didDeleteFile = [fileManager removeItemAtPath:filePath error:&fileError];
+    
+    if (fileError) {
+        NFLog(@"ERROR: %@", fileError.localizedDescription);
+    }
+    
+    return didDeleteFile;
+}
+
 + (BOOL)isValidEmailAddress:(NSString *)emailAddress
 {
     // source: http://stackoverflow.com/a/3638271 
