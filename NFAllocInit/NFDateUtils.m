@@ -24,6 +24,15 @@
     return string;
 }
 
++ (NSString *)stringFromDate:(NSDate *)date withFormat:(NSString *)dateFormat
+{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = dateFormat;
+    NSString *string = [formatter stringFromDate:date];
+    return string;
+}
+
+
 + (NSDate *)dateFromString:(NSString *)string
 {
     return [NFDateUtils dateFromString:string withFormat:@"yyy-MM-dd hh:mm:ss a"];

@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+#define NFDateFormatStandard @"yyyy-MM-dd hh:mm:ss a"
+
 @interface NFDateUtils : NSObject
 
 + (NSString *)stringFromDate:(NSDate *)date;
 + (NSString *)stringFromDate:(NSDate *)date withStyle:(NSDateFormatterStyle)style;
++ (NSString *)stringFromDate:(NSDate *)date withFormat:(NSString *)dateFormat;
 
 + (NSDate *)dateFromString:(NSString *)string;
 + (NSDate *)dateFromString:(NSString *)string withFormat:(NSString *)dateFormat;
