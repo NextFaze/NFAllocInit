@@ -14,4 +14,6 @@ Drag the NFAllocInit.xcodeproj project file from Finder to the Frameworks folder
 
 Add to target's Target Dependencies in Build Phases, and also Link Binary with Libraries.
 
+Also, in Link Binary with Libraries add AVFoundation.framework.
+
 Add to target linker flags '-ObjC'
