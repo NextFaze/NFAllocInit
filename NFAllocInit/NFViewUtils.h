@@ -37,6 +37,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 + (void)removeShadowsFromWebView:(UIWebView *)webView;
 
++ (UIImage *)scaleAndRotateImage:(UIImage *)image toMaxSize:(int)maxSize;
+
 @end
 
 CGRect CalcRectWithBorder(CGRect rectInitial, int iBorderSize);
