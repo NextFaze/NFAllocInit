@@ -9,6 +9,7 @@
 #import "NFResourceUtils.h"
 #import "NFViewUtils.h"
 #import "NFDateUtils.h"
+#import "NFDeviceUtils.h"
 #import "NSArray+FTW.h"
 #import "NSData+Base64.h"
 #import "NSString+Additions.h"
