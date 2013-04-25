@@ -42,12 +42,27 @@
 }
 
 + (BOOL)isJailbroken {
-    //http://stackoverflow.com/questions/413242/how-do-i-detect-that-an-sdk-app-is-running-on-a-jailbroken-phone
-    NSString *filePath = @"/Applications/Cydia.app";
-    return [[NSFileManager defaultManager] fileExistsAtPath:filePath];
+    //http://stackoverflow.com/questions/9565609/how-to-detect-if-your-iphone-is-jailbroken/9568130#9568130
+#if TARGET_IPHONE_SIMULATOR
+    return NO;
+#else
+    FILE *f = fopen("/bin/bash", "r");
+    
+    if (errno == ENOENT)
+    {
+        // device is NOT jailbroken
+        fclose(f);
+        return NO;
+    }
+    else {
+        // device IS jailbroken
+        fclose(f);
+        return YES;
+    }
+#endif
 }
 
-+ (BOOL) isPirated {
++ (BOOL)isPirated {
     //http://thwart-ipa-cracks.blogspot.com/2008/11/detection.html
     NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
     return ([info objectForKey: @"SignerIdentity"] != nil);
