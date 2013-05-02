@@ -24,6 +24,8 @@ typedef enum {
 + (UIImage *)loadImage:(NSString *)fileName;
 + (BOOL)deleteImage:(NSString *)fileName;
 
++ (BOOL)fileExistsInMainBundle:(NSString *)fileName ofType:(NSString *)fileExtension;
+
 + (BOOL)isValidEmailAddress:(NSString *)emailAddress;
 
 @end

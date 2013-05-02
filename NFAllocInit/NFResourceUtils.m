@@ -96,6 +96,12 @@
     return didDeleteFile;
 }
 
++ (BOOL)fileExistsInMainBundle:(NSString *)fileName ofType:(NSString *)fileExtension
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:fileName ofType:fileExtension];
+    return (path != nil);
+}
+
 + (BOOL)isValidEmailAddress:(NSString *)emailAddress
 {
     // source: http://stackoverflow.com/a/3638271 
