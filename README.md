@@ -1,19 +1,25 @@
-NFAllocInit
-===========
+# NFAllocInit
 
-The starting point for an iOS app - helper classes and the like
+The starting point for an iOS app - helper classes and the like. Add this to your project to have access to detailed logs, CGRect shortcuts, quick audio player, date parsers and other handy tidbits.
 
-Integration instructions
-========================
+## Integration instructions
 
-Add submodule to your project.
+1. Add submodule to your project:
 
-$ git submodule add git@github.com:NextfazeSD/NFAllocInit.git Frameworks/NFAllocInit
+    `$ git submodule add git@github.com:NextfazeSD/NFAllocInit.git ThirdParty/NFAllocInit`
+    
+2. Drag the NFAllocInit.xcodeproj project file from Finder to the ThirdParty folder in your project tree.
+3. Add `NFAllocInit` to target's Target Dependencies in Build Phases. 
+4. Add `libNFAllocInit.a` in Link Binary with Libraries.
+5. Also, in Link Binary with Libraries add `AVFoundation.framework` and `AudioToolbox.framework`.
+6. Add to target linker flags `-ObjC`.
+7. Add to Header Search Paths `ThirdParty/` with recursive selected.
 
-Drag the NFAllocInit.xcodeproj project file from Finder to the Frameworks folder in your project tree.
+## Contact
 
-Add to target's Target Dependencies in Build Phases, and also Link Binary with Libraries.
+[NextFaze](http://nextfaze.com)
 
-Also, in Link Binary with Libraries add AVFoundation.framework.
+## License
 
-Add to target linker flags '-ObjC'
+NFAllocInit is licensed under the terms of the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html). Please see the [LICENSE](https://github.com/NextfazeSD/NFAllocInit/blob/master/LICENSE) file for full details.
+

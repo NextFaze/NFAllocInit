@@ -11,6 +11,7 @@
 		7C08B02A166DD01F00012AA1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C08B029166DD01F00012AA1 /* CoreData.framework */; };
 		7C08B02C166DD02800012AA1 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C08B02B166DD02800012AA1 /* CoreImage.framework */; };
 		7C08B02E166DD03100012AA1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C08B02D166DD03100012AA1 /* CoreGraphics.framework */; };
+		7C1FE6B1171FC4330069499C /* NFDeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1FE6B0171FC4320069499C /* NFDeviceUtils.m */; };
 		7C9F4216170A51FD00495EDA /* NFAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4215170A51FD00495EDA /* NFAudioPlayer.m */; };
 		7C9F4218170A539000495EDA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C9F4217170A539000495EDA /* AVFoundation.framework */; };
 		7C9F421A170A53FB00495EDA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C9F4219170A53FB00495EDA /* AudioToolbox.framework */; };
@@ -46,6 +47,8 @@
 		7C08B029166DD01F00012AA1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7C08B02B166DD02800012AA1 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		7C08B02D166DD03100012AA1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7C1FE6AF171FC4320069499C /* NFDeviceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFDeviceUtils.h; sourceTree = "<group>"; };
+		7C1FE6B0171FC4320069499C /* NFDeviceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFDeviceUtils.m; sourceTree = "<group>"; };
 		7C9F4214170A51FD00495EDA /* NFAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFAudioPlayer.h; sourceTree = "<group>"; };
 		7C9F4215170A51FD00495EDA /* NFAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFAudioPlayer.m; sourceTree = "<group>"; };
 		7C9F4217170A539000495EDA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -123,8 +126,6 @@
 		7CEFCDB3166DCB7500B0FB6A = {
 			isa = PBXGroup;
 			children = (
-				7C9F4219170A53FB00495EDA /* AudioToolbox.framework */,
-				7C9F4217170A539000495EDA /* AVFoundation.framework */,
 				7CAAE68F166F0E400070636C /* README.md */,
 				7CEFCDC3166DCB7500B0FB6A /* NFAllocInit */,
 				7CEFCDC0166DCB7500B0FB6A /* Frameworks */,
@@ -143,6 +144,8 @@
 		7CEFCDC0166DCB7500B0FB6A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C9F4219170A53FB00495EDA /* AudioToolbox.framework */,
+				7C9F4217170A539000495EDA /* AVFoundation.framework */,
 				7C08B029166DD01F00012AA1 /* CoreData.framework */,
 				7C08B02D166DD03100012AA1 /* CoreGraphics.framework */,
 				7C08B02B166DD02800012AA1 /* CoreImage.framework */,
@@ -165,6 +168,8 @@
 				7CEFCE36166DCDA400B0FB6A /* NFViewUtils.m */,
 				7CA179D716F981D100841703 /* NFDateUtils.h */,
 				7CA179D816F981D100841703 /* NFDateUtils.m */,
+				7C1FE6AF171FC4320069499C /* NFDeviceUtils.h */,
+				7C1FE6B0171FC4320069499C /* NFDeviceUtils.m */,
 				7CAAE53E166EB8EF0070636C /* Categories */,
 				7CEFCDC4166DCB7500B0FB6A /* Supporting Files */,
 			);
@@ -242,6 +247,7 @@
 				7CAAE556166EB8EF0070636C /* UIView+FrameAdjustments.m in Sources */,
 				7CA179D916F981D100841703 /* NFDateUtils.m in Sources */,
 				7C9F4216170A51FD00495EDA /* NFAudioPlayer.m in Sources */,
+				7C1FE6B1171FC4330069499C /* NFDeviceUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
