@@ -10,6 +10,15 @@
 
 @implementation NFDeviceUtils
 
++ (BOOL)isOSAtLeastVersion:(float)osVersion
+{
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= osVersion)
+    {
+        return YES;
+    }
+    return NO;
+}
+
 + (BOOL)isPad
 {
     return [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad;
