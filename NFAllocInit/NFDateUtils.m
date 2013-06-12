@@ -19,6 +19,10 @@
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateStyle = style;
+    
+    NSTimeZone *timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
+    [formatter setTimeZone:timeZone];
+    
     NSString *string = [formatter stringFromDate:date];
     return string;
 }
@@ -27,6 +31,10 @@
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = dateFormat;
+    
+    NSTimeZone *timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
+    [formatter setTimeZone:timeZone];
+    
     NSString *string = [formatter stringFromDate:date];
     return string;
 }
