@@ -10,10 +10,9 @@
 
 @implementation NFDateUtils
 
-
 + (NSString *)stringFromDate:(NSDate *)date
 {
-    return [NFDateUtils stringFromDate:date withStyle:NSDateFormatterShortStyle];
+    return [NFDateUtils stringFromDate:date withFormat:NFDateFormatISO_8601];
 }
 
 + (NSString *)stringFromDate:(NSDate *)date withStyle:(NSDateFormatterStyle)style
@@ -35,7 +34,7 @@
 
 + (NSDate *)dateFromString:(NSString *)string
 {
-    return [NFDateUtils dateFromString:string withFormat:@"yyy-MM-dd hh:mm:ss a"];
+    return [NFDateUtils dateFromString:string withFormat:NFDateFormatISO_8601];
 }
 
 + (NSDate *)dateFromString:(NSString *)string withFormat:(NSString *)dateFormat
