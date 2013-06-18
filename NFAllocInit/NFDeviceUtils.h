@@ -10,6 +10,7 @@
 
 @interface NFDeviceUtils : NSObject
 
++ (BOOL)isOSAtLeastVersion:(float)osVersion;
 + (BOOL)isPad;
 + (BOOL)is4inch;
 + (BOOL)isSimulator;

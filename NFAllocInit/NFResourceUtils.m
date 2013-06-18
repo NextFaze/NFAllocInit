@@ -96,6 +96,26 @@
     return didDeleteFile;
 }
 
++ (BOOL)fileExistsInMainBundle:(NSString *)fileName ofType:(NSString *)fileExtension
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:fileName ofType:fileExtension];
+    return (path != nil);
+}
+
++ (NSArray *)arrayFromFile:(NSString *)fileName
+{
+    NSError *error;
+    NSString *path = [[NSBundle mainBundle] pathForResource:[fileName stringByDeletingPathExtension] ofType:[fileName pathExtension]];
+    NSString *stringContents = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
+    NSArray *array = [stringContents componentsSeparatedByString:@"\n"];
+    
+    if (error) {
+        NFLog(@"ERROR: %@", error);
+    }
+    
+    return array;
+}
+
 + (BOOL)isValidEmailAddress:(NSString *)emailAddress
 {
     // source: http://stackoverflow.com/a/3638271 

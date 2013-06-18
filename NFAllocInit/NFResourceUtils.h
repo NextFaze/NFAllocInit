@@ -24,6 +24,11 @@ typedef enum {
 + (UIImage *)loadImage:(NSString *)fileName;
 + (BOOL)deleteImage:(NSString *)fileName;
 
++ (BOOL)fileExistsInMainBundle:(NSString *)fileName ofType:(NSString *)fileExtension;
+
+// expects a text file with on array entry per line
++ (NSArray *)arrayFromFile:(NSString *)fileName;
+
 + (BOOL)isValidEmailAddress:(NSString *)emailAddress;
 
 @end
