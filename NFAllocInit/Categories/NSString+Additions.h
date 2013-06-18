@@ -10,5 +10,6 @@
 @interface NSString (Additions)
 
 - (NSString *)stringByURLEncoding;
+- (NSString *)md5;
 
 @end
