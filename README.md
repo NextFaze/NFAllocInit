@@ -12,8 +12,11 @@ The starting point for an iOS app - helper classes and the like. Add this to you
 3. Add `NFAllocInit` to target's Target Dependencies in Build Phases. 
 4. Add `libNFAllocInit.a` in Link Binary with Libraries.
 5. Also, in Link Binary with Libraries add `AVFoundation.framework` and `AudioToolbox.framework`.
-6. Add to target linker flags `-ObjC`.
-7. Add to Header Search Paths `ThirdParty/` with recursive selected.
+6. Add to other linker flags `-ObjC`.
+7. Add to header search paths `ThirdParty/` with recursive selected.
+
+Optionally, in your pre-compiled header (prefix.pch) add `#import "NFAllocInit.h"` to have access to all the classes throughout your project.
+
 
 ## Contact
 
