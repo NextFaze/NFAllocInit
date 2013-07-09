@@ -27,6 +27,7 @@
 		7CEFCDC2166DCB7500B0FB6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CEFCDC1166DCB7500B0FB6A /* Foundation.framework */; };
 		7CEFCE37166DCDA400B0FB6A /* NFResourceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CEFCE34166DCDA400B0FB6A /* NFResourceUtils.m */; };
 		7CEFCE38166DCDA400B0FB6A /* NFViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CEFCE36166DCDA400B0FB6A /* NFViewUtils.m */; };
+		B5839369178B99EB002B7075 /* UIDevice+NFAllocInit.m in Sources */ = {isa = PBXBuildFile; fileRef = B5839368178B99EB002B7075 /* UIDevice+NFAllocInit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -80,6 +81,8 @@
 		7CEFCE34166DCDA400B0FB6A /* NFResourceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFResourceUtils.m; sourceTree = "<group>"; };
 		7CEFCE35166DCDA400B0FB6A /* NFViewUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFViewUtils.h; sourceTree = "<group>"; };
 		7CEFCE36166DCDA400B0FB6A /* NFViewUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFViewUtils.m; sourceTree = "<group>"; };
+		B5839367178B99EB002B7075 /* UIDevice+NFAllocInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+NFAllocInit.h"; sourceTree = "<group>"; };
+		B5839368178B99EB002B7075 /* UIDevice+NFAllocInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+NFAllocInit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				7CAAE54C166EB8EF0070636C /* UIView+Additions.m */,
 				7CAAE54D166EB8EF0070636C /* UIView+FrameAdjustments.h */,
 				7CAAE54E166EB8EF0070636C /* UIView+FrameAdjustments.m */,
+				B5839367178B99EB002B7075 /* UIDevice+NFAllocInit.h */,
+				B5839368178B99EB002B7075 /* UIDevice+NFAllocInit.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -248,6 +253,7 @@
 				7CA179D916F981D100841703 /* NFDateUtils.m in Sources */,
 				7C9F4216170A51FD00495EDA /* NFAudioPlayer.m in Sources */,
 				7C1FE6B1171FC4330069499C /* NFDeviceUtils.m in Sources */,
+				B5839369178B99EB002B7075 /* UIDevice+NFAllocInit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

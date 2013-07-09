@@ -18,3 +18,4 @@
 #import "UIImage+RoundedCorner.h"
 #import "UIView+Additions.h"
 #import "UIView+FrameAdjustments.h"
+#import "UIDevice+NFAllocInit.h"
