@@ -10,4 +10,5 @@
 @interface NSArray (FTW)
 - (id)firstObject;
 - (id)objectAtIndexFTW:(NSUInteger)index;
+- (NSArray *)shuffle;
 @end

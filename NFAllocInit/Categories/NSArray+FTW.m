@@ -17,4 +17,17 @@
     return index < self.count ? [self objectAtIndex:index] : nil;
 }
 
+- (NSArray *)shuffle
+{
+    NSUInteger count = [self count];
+    NSMutableArray *new = [NSMutableArray arrayWithArray:self];
+    for (NSUInteger i = 0; i < count; ++i) {
+        // Select a random element between i and end of array to swap with.
+        NSInteger nElements = count - i;
+        NSInteger n = (arc4random() % nElements) + i;
+        [new exchangeObjectAtIndex:i withObjectAtIndex:n];
+    }
+    return new;
+}
+
 @end
