@@ -11,7 +11,7 @@
 #import "NFDateUtils.h"
 #import "NFDeviceUtils.h"
 #import "NSArray+FTW.h"
-#import "NSData+Base64.h"
+#import "NSData+NFAllocInit.h"
 #import "NSString+Additions.h"
 #import "UIImage+Alpha.h"
 #import "UIImage+Resize.h"

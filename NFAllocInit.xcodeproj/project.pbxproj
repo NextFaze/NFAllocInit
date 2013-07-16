@@ -17,7 +17,7 @@
 		7C9F421A170A53FB00495EDA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C9F4219170A53FB00495EDA /* AudioToolbox.framework */; };
 		7CA179D916F981D100841703 /* NFDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA179D816F981D100841703 /* NFDateUtils.m */; };
 		7CAAE54F166EB8EF0070636C /* NSArray+FTW.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE540166EB8EF0070636C /* NSArray+FTW.m */; };
-		7CAAE550166EB8EF0070636C /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE542166EB8EF0070636C /* NSData+Base64.m */; };
+		7CAAE550166EB8EF0070636C /* NSData+NFAllocInit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE542166EB8EF0070636C /* NSData+NFAllocInit.m */; };
 		7CAAE551166EB8EF0070636C /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE544166EB8EF0070636C /* NSString+Additions.m */; };
 		7CAAE552166EB8EF0070636C /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE546166EB8EF0070636C /* UIImage+Alpha.m */; };
 		7CAAE553166EB8EF0070636C /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE548166EB8EF0070636C /* UIImage+Resize.m */; };
@@ -59,8 +59,8 @@
 		7CAAE519166EAF280070636C /* NFAllocInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFAllocInit.h; sourceTree = "<group>"; };
 		7CAAE53F166EB8EF0070636C /* NSArray+FTW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+FTW.h"; sourceTree = "<group>"; };
 		7CAAE540166EB8EF0070636C /* NSArray+FTW.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FTW.m"; sourceTree = "<group>"; };
-		7CAAE541166EB8EF0070636C /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
-		7CAAE542166EB8EF0070636C /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		7CAAE541166EB8EF0070636C /* NSData+NFAllocInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+NFAllocInit.h"; sourceTree = "<group>"; };
+		7CAAE542166EB8EF0070636C /* NSData+NFAllocInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+NFAllocInit.m"; sourceTree = "<group>"; };
 		7CAAE543166EB8EF0070636C /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
 		7CAAE544166EB8EF0070636C /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		7CAAE545166EB8EF0070636C /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
@@ -108,8 +108,8 @@
 			children = (
 				7CAAE53F166EB8EF0070636C /* NSArray+FTW.h */,
 				7CAAE540166EB8EF0070636C /* NSArray+FTW.m */,
-				7CAAE541166EB8EF0070636C /* NSData+Base64.h */,
-				7CAAE542166EB8EF0070636C /* NSData+Base64.m */,
+				7CAAE541166EB8EF0070636C /* NSData+NFAllocInit.h */,
+				7CAAE542166EB8EF0070636C /* NSData+NFAllocInit.m */,
 				7CAAE543166EB8EF0070636C /* NSString+Additions.h */,
 				7CAAE544166EB8EF0070636C /* NSString+Additions.m */,
 				7CAAE545166EB8EF0070636C /* UIImage+Alpha.h */,
@@ -243,7 +243,7 @@
 				7CEFCE37166DCDA400B0FB6A /* NFResourceUtils.m in Sources */,
 				7CEFCE38166DCDA400B0FB6A /* NFViewUtils.m in Sources */,
 				7CAAE54F166EB8EF0070636C /* NSArray+FTW.m in Sources */,
-				7CAAE550166EB8EF0070636C /* NSData+Base64.m in Sources */,
+				7CAAE550166EB8EF0070636C /* NSData+NFAllocInit.m in Sources */,
 				7CAAE551166EB8EF0070636C /* NSString+Additions.m in Sources */,
 				7CAAE552166EB8EF0070636C /* UIImage+Alpha.m in Sources */,
 				7CAAE553166EB8EF0070636C /* UIImage+Resize.m in Sources */,
