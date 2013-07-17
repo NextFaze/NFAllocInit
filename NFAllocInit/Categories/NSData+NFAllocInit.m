@@ -51,7 +51,7 @@
 }  
 
 - (NSString *)hexadecimal {
-    NSMutableString *result = [NSMutableString string];
+    NSMutableString *result = [NSMutableString stringWithCapacity:self.length * 2];
     unsigned char *c = (unsigned char *)self.bytes;
     for(int i = 0; i < self.length; i++) {
         [result appendFormat:@"%x", *c++];
