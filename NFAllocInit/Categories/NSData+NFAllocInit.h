@@ -7,5 +7,9 @@
 
 
 @interface NSData (NFAllocInit)
+
+- (NSString *)md5;
 - (NSString *)encodeToBase64;
+- (NSString *)hexadecimal;
+
 @end

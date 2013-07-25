@@ -6,6 +6,7 @@
 //
 
 #import "NSData+NFAllocInit.h"
+#import <CommonCrypto/CommonCrypto.h>
 
 @implementation NSData (NFAllocInit)
 
@@ -48,5 +49,20 @@
 	
     return result;  
 }  
+
+- (NSString *)hexadecimal {
+    NSMutableString *result = [NSMutableString stringWithCapacity:self.length * 2];
+    unsigned char *c = (unsigned char *)self.bytes;
+    for(int i = 0; i < self.length; i++) {
+        [result appendFormat:@"%x", *c++];
+    }
+    return result;
+}
+
+- (NSString *)md5 {
+    NSMutableData *result = [NSMutableData dataWithCapacity:CC_MD5_DIGEST_LENGTH];
+    CC_MD5(self.bytes, [self length], result.mutableBytes);
+    return [result hexadecimal];
+}
 
 @end
