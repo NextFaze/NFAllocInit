@@ -6,6 +6,6 @@
 //
 
 
-@interface NSData (Base64)
+@interface NSData (NFAllocInit)
 - (NSString *)encodeToBase64;
 @end

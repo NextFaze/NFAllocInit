@@ -5,9 +5,9 @@
 //  Copyright (c) 2012 NextFaze. All rights reserved.
 //
 
-#import "NSArray+FTW.h"
+#import "NSArray+NFAllocInit.h"
 
-@implementation NSArray (FTW)
+@implementation NSArray (NFAllocInit)
 
 - (id)firstObject {
     return self.count == 0 ? nil : [self objectAtIndex:0];

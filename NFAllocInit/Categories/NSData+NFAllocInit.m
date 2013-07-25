@@ -1,13 +1,13 @@
 //
-//  NSData+Base64
+//  NSData+NFAllocInit
 //
 //  Created by Andreas Wulf.
 //  Copyright 2012 NextFaze. All rights reserved.
 //
 
-#import "NSData+Base64.h"
+#import "NSData+NFAllocInit.h"
 
-@implementation NSData (Base64)
+@implementation NSData (NFAllocInit)
 
 - (NSString *)encodeToBase64 {  
 	NSData *plainText = self;

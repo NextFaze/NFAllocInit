@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (Additions)
+@interface NSString (NFAllocInit)
 
 - (NSString *)stringByURLEncoding;
 - (NSString *)md5;

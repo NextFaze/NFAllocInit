@@ -5,10 +5,10 @@
 //  Copyright (c) 2012 NextFaze. All rights reserved.
 //
 
-#import "NSString+Additions.h"
+#import "NSString+NFAllocInit.h"
 #import <CommonCrypto/CommonHMAC.h>
 
-@implementation NSString (Additions)
+@implementation NSString (NFAllocInit)
 
 - (NSString *)stringByURLEncoding {
 	return (__bridge_transfer NSString *)CFURLCreateStringByAddingPercentEscapes(NULL,

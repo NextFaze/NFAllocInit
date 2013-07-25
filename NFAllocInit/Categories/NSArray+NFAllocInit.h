@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSArray (FTW)
+@interface NSArray (NFAllocInit)
 - (id)firstObject;
 - (id)objectAtIndexFTW:(NSUInteger)index;
 - (NSArray *)shuffle;

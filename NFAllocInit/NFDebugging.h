@@ -12,6 +12,8 @@
     #define NFLog(format, ...) ; // null statement
 #endif
 
+#define NSStringFromBool(value) (value ? @"YES" : @"NO")
+
 static void ShowAlertWithError(NSError *error)
 {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
