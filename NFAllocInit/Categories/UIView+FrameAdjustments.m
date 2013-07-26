@@ -107,4 +107,8 @@
     self.frame = frame;
 }
 
+- (CGFloat)aspect {
+    return self.width / self.height;
+}
+
 @end

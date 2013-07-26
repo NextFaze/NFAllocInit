@@ -16,6 +16,7 @@
 #import "UIImage+Alpha.h"
 #import "UIImage+Resize.h"
 #import "UIImage+RoundedCorner.h"
+#import "UIImage+NFAllocInit.h"
 #import "UIView+Additions.h"
 #import "UIView+FrameAdjustments.h"
 #import "UIDevice+NFAllocInit.h"

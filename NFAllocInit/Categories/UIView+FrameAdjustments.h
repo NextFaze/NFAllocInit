@@ -11,5 +11,6 @@
 
 @property (nonatomic, assign) CGFloat x, y, top, bottom, left, right, width, height, centerX, centerY;
 @property (nonatomic, assign) CGSize size;
+@property (nonatomic, readonly) CGFloat aspect;
 
 @end
