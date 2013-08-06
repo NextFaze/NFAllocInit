@@ -28,6 +28,7 @@
 		7CEFCE37166DCDA400B0FB6A /* NFResourceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CEFCE34166DCDA400B0FB6A /* NFResourceUtils.m */; };
 		7CEFCE38166DCDA400B0FB6A /* NFViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CEFCE36166DCDA400B0FB6A /* NFViewUtils.m */; };
 		B510A1FD17A213D2006E46E7 /* UIImage+NFAllocInit.m in Sources */ = {isa = PBXBuildFile; fileRef = B510A1FC17A213D2006E46E7 /* UIImage+NFAllocInit.m */; };
+		B539BA3717B0AC16005E3B2E /* UIColor+NFAllocInit.m in Sources */ = {isa = PBXBuildFile; fileRef = B539BA3617B0AC16005E3B2E /* UIColor+NFAllocInit.m */; };
 		B5839369178B99EB002B7075 /* UIDevice+NFAllocInit.m in Sources */ = {isa = PBXBuildFile; fileRef = B5839368178B99EB002B7075 /* UIDevice+NFAllocInit.m */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,8 @@
 		7CEFCE36166DCDA400B0FB6A /* NFViewUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFViewUtils.m; sourceTree = "<group>"; };
 		B510A1FB17A213D2006E46E7 /* UIImage+NFAllocInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+NFAllocInit.h"; sourceTree = "<group>"; };
 		B510A1FC17A213D2006E46E7 /* UIImage+NFAllocInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+NFAllocInit.m"; sourceTree = "<group>"; };
+		B539BA3517B0AC16005E3B2E /* UIColor+NFAllocInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+NFAllocInit.h"; sourceTree = "<group>"; };
+		B539BA3617B0AC16005E3B2E /* UIColor+NFAllocInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+NFAllocInit.m"; sourceTree = "<group>"; };
 		B5839367178B99EB002B7075 /* UIDevice+NFAllocInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+NFAllocInit.h"; sourceTree = "<group>"; };
 		B5839368178B99EB002B7075 /* UIDevice+NFAllocInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+NFAllocInit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +132,8 @@
 				7CAAE54E166EB8EF0070636C /* UIView+FrameAdjustments.m */,
 				B5839367178B99EB002B7075 /* UIDevice+NFAllocInit.h */,
 				B5839368178B99EB002B7075 /* UIDevice+NFAllocInit.m */,
+				B539BA3517B0AC16005E3B2E /* UIColor+NFAllocInit.h */,
+				B539BA3617B0AC16005E3B2E /* UIColor+NFAllocInit.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -260,6 +265,7 @@
 				7C1FE6B1171FC4330069499C /* NFDeviceUtils.m in Sources */,
 				B5839369178B99EB002B7075 /* UIDevice+NFAllocInit.m in Sources */,
 				B510A1FD17A213D2006E46E7 /* UIImage+NFAllocInit.m in Sources */,
+				B539BA3717B0AC16005E3B2E /* UIColor+NFAllocInit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

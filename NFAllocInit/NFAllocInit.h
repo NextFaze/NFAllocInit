@@ -13,6 +13,7 @@
 #import "NSArray+NFAllocInit.h"
 #import "NSData+NFAllocInit.h"
 #import "NSString+NFAllocInit.h"
+#import "UIColor+NFAllocInit.h"
 #import "UIImage+Alpha.h"
 #import "UIImage+Resize.h"
 #import "UIImage+RoundedCorner.h"
