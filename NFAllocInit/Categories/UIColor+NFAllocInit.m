@@ -39,11 +39,6 @@
     if ([hexColor hasPrefix:@"#"])
 		hexColor = [hexColor substringFromIndex:1];
 	
-    // String should be 6 or 7 characters if it includes '#'
-    if ([hexColor length] > 6)
-		return [UIColor grayColor];
-    
-	
     // if the value isn't 6 characters at this point return
     // the color black
     if ([hexColor length] != 6)
