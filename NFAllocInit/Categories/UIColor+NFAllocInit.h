@@ -17,7 +17,9 @@
 - (NSString*)hexValueWithAlpha;
 
 - (UIColor *)colorByDarkeningColor;
+- (UIColor *)colorByWhiteningColorBy:(float)factor;
 - (UIColor *)colorByFadingColor;
 - (UIColor *)colorByChangingAlphaTo:(CGFloat)newAlpha;
+- (UIColor *)colorByMuliplyingComponentsBy:(float)factor;
 
 @end

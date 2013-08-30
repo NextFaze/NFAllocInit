@@ -107,6 +107,12 @@
 }
 
 - (UIColor *)colorByFadingColor {
+    return [self colorByMuliplyingComponentsBy:2];
+}
+
+#define WHITEN_COMPONENT(c, factor) (c + (1.0 - c) * factor)
+
+- (UIColor *)colorByWhiteningColorBy:(float)factor {
     // oldComponents is the array INSIDE the original color
 	// changing these changes the original, so we copy it
 	CGFloat *oldComponents = (CGFloat *)CGColorGetComponents([self CGColor]);
@@ -119,18 +125,18 @@
 		case 2:
 		{
 			//grayscale
-			newComponents[0] = oldComponents[0]*2;
-			newComponents[1] = oldComponents[0]*2;
-			newComponents[2] = oldComponents[0]*2;
+			newComponents[0] = WHITEN_COMPONENT(oldComponents[0], factor);
+			newComponents[1] = WHITEN_COMPONENT(oldComponents[0], factor);
+			newComponents[2] = WHITEN_COMPONENT(oldComponents[0], factor);
 			newComponents[3] = oldComponents[1];
 			break;
 		}
 		case 4:
 		{
 			//RGBA
-			newComponents[0] = oldComponents[0]*2;
-			newComponents[1] = oldComponents[1]*2;
-			newComponents[2] = oldComponents[2]*2;
+			newComponents[0] = WHITEN_COMPONENT(oldComponents[0], factor);
+			newComponents[1] = WHITEN_COMPONENT(oldComponents[1], factor);
+			newComponents[2] = WHITEN_COMPONENT(oldComponents[2], factor);
 			newComponents[3] = oldComponents[3];
 			break;
 		}
@@ -146,7 +152,11 @@
 	return retColor;
 }
 
-- (UIColor *)colorByDarkeningColor
+- (UIColor *)colorByDarkeningColor {
+    return [self colorByMuliplyingComponentsBy:0.7];
+}
+
+- (UIColor *)colorByMuliplyingComponentsBy:(float)factor
 {
 	// oldComponents is the array INSIDE the original color
 	// changing these changes the original, so we copy it
@@ -160,18 +170,18 @@
 		case 2:
 		{
 			//grayscale
-			newComponents[0] = oldComponents[0]*0.7;
-			newComponents[1] = oldComponents[0]*0.7;
-			newComponents[2] = oldComponents[0]*0.7;
+			newComponents[0] = oldComponents[0] * factor;
+			newComponents[1] = oldComponents[0] * factor;
+			newComponents[2] = oldComponents[0] * factor;
 			newComponents[3] = oldComponents[1];
 			break;
 		}
 		case 4:
 		{
 			//RGBA
-			newComponents[0] = oldComponents[0]*0.7;
-			newComponents[1] = oldComponents[1]*0.7;
-			newComponents[2] = oldComponents[2]*0.7;
+			newComponents[0] = oldComponents[0] * factor;
+			newComponents[1] = oldComponents[1] * factor;
+			newComponents[2] = oldComponents[2] * factor;
 			newComponents[3] = oldComponents[3];
 			break;
 		}
