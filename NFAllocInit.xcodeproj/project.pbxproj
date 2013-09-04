@@ -25,6 +25,7 @@
 		7CAAE555166EB8EF0070636C /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE54C166EB8EF0070636C /* UIView+Additions.m */; };
 		7CAAE556166EB8EF0070636C /* UIView+FrameAdjustments.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE54E166EB8EF0070636C /* UIView+FrameAdjustments.m */; };
 		7CABC8D917D6AEB0004C338D /* NSError+NFAllocInit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CABC8D817D6AEB0004C338D /* NSError+NFAllocInit.m */; };
+		7CABC8DC17D6B35E004C338D /* NFDelegateSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CABC8DB17D6B35D004C338D /* NFDelegateSet.m */; };
 		7CEFCDC2166DCB7500B0FB6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CEFCDC1166DCB7500B0FB6A /* Foundation.framework */; };
 		7CEFCE37166DCDA400B0FB6A /* NFResourceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CEFCE34166DCDA400B0FB6A /* NFResourceUtils.m */; };
 		7CEFCE38166DCDA400B0FB6A /* NFViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CEFCE36166DCDA400B0FB6A /* NFViewUtils.m */; };
@@ -79,6 +80,8 @@
 		7CAAE68F166F0E400070636C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		7CABC8D717D6AEB0004C338D /* NSError+NFAllocInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+NFAllocInit.h"; sourceTree = "<group>"; };
 		7CABC8D817D6AEB0004C338D /* NSError+NFAllocInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+NFAllocInit.m"; sourceTree = "<group>"; };
+		7CABC8DA17D6B35D004C338D /* NFDelegateSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFDelegateSet.h; sourceTree = "<group>"; };
+		7CABC8DB17D6B35D004C338D /* NFDelegateSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFDelegateSet.m; sourceTree = "<group>"; };
 		7CEFCDBE166DCB7500B0FB6A /* libNFAllocInit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNFAllocInit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CEFCDC1166DCB7500B0FB6A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7CEFCDC5166DCB7500B0FB6A /* NFAllocInit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NFAllocInit-Prefix.pch"; sourceTree = "<group>"; };
@@ -188,6 +191,8 @@
 				7CEFCE36166DCDA400B0FB6A /* NFViewUtils.m */,
 				7CA179D716F981D100841703 /* NFDateUtils.h */,
 				7CA179D816F981D100841703 /* NFDateUtils.m */,
+				7CABC8DA17D6B35D004C338D /* NFDelegateSet.h */,
+				7CABC8DB17D6B35D004C338D /* NFDelegateSet.m */,
 				7C1FE6AF171FC4320069499C /* NFDeviceUtils.h */,
 				7C1FE6B0171FC4320069499C /* NFDeviceUtils.m */,
 				7CAAE53E166EB8EF0070636C /* Categories */,
@@ -272,6 +277,7 @@
 				B510A1FD17A213D2006E46E7 /* UIImage+NFAllocInit.m in Sources */,
 				B539BA3717B0AC16005E3B2E /* UIColor+NFAllocInit.m in Sources */,
 				7CABC8D917D6AEB0004C338D /* NSError+NFAllocInit.m in Sources */,
+				7CABC8DC17D6B35E004C338D /* NFDelegateSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
