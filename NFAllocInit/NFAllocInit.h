@@ -20,6 +20,7 @@
 #import "UIImage+Resize.h"
 #import "UIImage+RoundedCorner.h"
 #import "UIImage+NFAllocInit.h"
+#import "UIImage+NFAllocInit_Paths.h"
 #import "UIView+Additions.h"
 #import "UIView+FrameAdjustments.h"
 #import "UIDevice+NFAllocInit.h"

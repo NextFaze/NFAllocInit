@@ -32,6 +32,7 @@
 		B510A1FD17A213D2006E46E7 /* UIImage+NFAllocInit.m in Sources */ = {isa = PBXBuildFile; fileRef = B510A1FC17A213D2006E46E7 /* UIImage+NFAllocInit.m */; };
 		B539BA3717B0AC16005E3B2E /* UIColor+NFAllocInit.m in Sources */ = {isa = PBXBuildFile; fileRef = B539BA3617B0AC16005E3B2E /* UIColor+NFAllocInit.m */; };
 		B5839369178B99EB002B7075 /* UIDevice+NFAllocInit.m in Sources */ = {isa = PBXBuildFile; fileRef = B5839368178B99EB002B7075 /* UIDevice+NFAllocInit.m */; };
+		B5F72B8E17D863F50015D59C /* UIImage+NFAllocInit_Paths.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F72B8C17D863F50015D59C /* UIImage+NFAllocInit_Paths.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -95,6 +96,8 @@
 		B539BA3617B0AC16005E3B2E /* UIColor+NFAllocInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+NFAllocInit.m"; sourceTree = "<group>"; };
 		B5839367178B99EB002B7075 /* UIDevice+NFAllocInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+NFAllocInit.h"; sourceTree = "<group>"; };
 		B5839368178B99EB002B7075 /* UIDevice+NFAllocInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+NFAllocInit.m"; sourceTree = "<group>"; };
+		B5F72B8C17D863F50015D59C /* UIImage+NFAllocInit_Paths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+NFAllocInit_Paths.m"; sourceTree = "<group>"; };
+		B5F72B9017D864370015D59C /* UIImage+NFAllocInit_Paths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+NFAllocInit_Paths.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 		7CAAE53E166EB8EF0070636C /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				B5F72B9017D864370015D59C /* UIImage+NFAllocInit_Paths.h */,
+				B5F72B8C17D863F50015D59C /* UIImage+NFAllocInit_Paths.m */,
 				7CAAE53F166EB8EF0070636C /* NSArray+NFAllocInit.h */,
 				7CAAE540166EB8EF0070636C /* NSArray+NFAllocInit.m */,
 				7CAAE541166EB8EF0070636C /* NSData+NFAllocInit.h */,
@@ -278,6 +283,7 @@
 				B539BA3717B0AC16005E3B2E /* UIColor+NFAllocInit.m in Sources */,
 				7CABC8D917D6AEB0004C338D /* NSError+NFAllocInit.m in Sources */,
 				7CABC8DC17D6B35E004C338D /* NFDelegateSet.m in Sources */,
+				B5F72B8E17D863F50015D59C /* UIImage+NFAllocInit_Paths.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
