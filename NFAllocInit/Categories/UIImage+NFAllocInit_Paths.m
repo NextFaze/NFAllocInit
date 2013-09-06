@@ -1,4 +1,26 @@
 // UIImage (NFAllocInit_Paths)
+/*
+ * full image suffix search path (when orientation is known):
+ 
+ "-Portrait@2x~568h",
+ "-Portrait~568h",
+ "-Portrait@2x~iphone",
+ "-Portrait~iphone",
+ "-Portrait@2x",
+ "-Portrait",
+ "-568h@2x~568h",
+ "-568h~568h",
+ "-568h@2x~iphone",
+ "-568h~iphone",
+ "-568h@2x",
+ "-568h",
+ "@2x~568h",
+ "~568h",
+ "@2x~iphone",
+ "~iphone",
+ "@2x",
+ ""
+ */
 
 #import <objc/runtime.h>
 #import "UIImage+NFAllocInit_Paths.h"
@@ -44,7 +66,7 @@ static BOOL isRetina = NO;
     NSString *extension = IMAGE_EXTENSION(imageName);
     NSString *newName = [self suffixedNameForImageNamed:imageName orientation:orientation];
 
-    NFLog(@"imageNamed: %@ -> %@", imageName, newName);
+    //NFLog(@"imageNamed: %@ -> %@", imageName, newName);
     
     // if an image with a suffix was found, return it
     if(newName)
@@ -55,7 +77,7 @@ static BOOL isRetina = NO;
 }
 
 + (UIImage *)nextfazeImageNamed:(NSString *)imageName {
-    UIInterfaceOrientation orientation = UIInterfaceOrientationPortrait;
+    UIInterfaceOrientation orientation = UIDeviceOrientationUnknown;
     return [self imageNamed:imageName orientation:orientation];
 }
 
@@ -83,22 +105,24 @@ static BOOL isRetina = NO;
 }
 
 // return the search path for the given image name
-// <basename><orientation_modifier><scale_modifier><device_modifier>.png
+// <basename><orientation_modifier/usage_modifier><scale_modifier><device_modifier>.png
 + (NSArray *)suffixSearchPathOrientation:(UIInterfaceOrientation)orientation {
     NSMutableArray *list = [NSMutableArray array];
-    NSString *orientationModifier = UIInterfaceOrientationIsPortrait(orientation) ? @"-Portrait" : @"-Landscape";
+    NSString *orientationModifier = (orientation == UIDeviceOrientationUnknown ? @"SKIP" :
+                                     UIInterfaceOrientationIsPortrait(orientation) ? @"-Portrait" : @"-Landscape");
     NSString *orientationModifier2 = orientation == UIInterfaceOrientationPortraitUpsideDown ? @"-PortraintUpsideDown" : @"SKIP";
+    NSString *usageModifier = [NFDeviceUtils is4inch] ? @"-568h" : @"SKIP";
     NSString *deviceModifier = [NFDeviceUtils isPad] ? @"~ipad" : @"~iphone";
     NSString *deviceModifier2 = [NFDeviceUtils is4inch] ? @"~568h" : @"SKIP";
     NSArray *scaleModifiers = [self retinaScaleModifiers];
-        
-    for(NSString *orientMod in @[orientationModifier2, orientationModifier, @""]) {
+    
+    for(NSString *orientMod in @[orientationModifier2, orientationModifier, usageModifier, @""]) {
         if([orientMod isEqualToString:@"SKIP"]) continue;
-
-        for(NSString *scaleMod in scaleModifiers) {
-            for(NSString *devMod in @[deviceModifier2, deviceModifier, @""]) {
-                if([devMod isEqualToString:@"SKIP"]) continue;
-                
+        
+        for(NSString *devMod in @[deviceModifier2, deviceModifier, @""]) {
+            if([devMod isEqualToString:@"SKIP"]) continue;
+            
+            for(NSString *scaleMod in scaleModifiers) {
                 [self addSearchPaths:list modifiers:@[orientMod, scaleMod, devMod]];
             }
         }
