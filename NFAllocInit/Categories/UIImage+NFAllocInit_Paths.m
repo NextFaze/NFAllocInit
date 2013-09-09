@@ -69,8 +69,27 @@ static BOOL isRetina = NO;
     //NFLog(@"imageNamed: %@ -> %@", imageName, newName);
     
     // if an image with a suffix was found, return it
-    if(newName)
-        return [self nextfazeImageNamed:[newName stringByAppendingPathExtension:extension]];
+    if(newName) {
+        NSRange range2x = [newName rangeOfString:@"@2x"];
+        if([newName hasSuffix:@"@2x"]) {
+            // if the suffix is @2x, we can drop it, because the original implementation will find it and set the scale correctly
+            newName = [newName substringToIndex:newName.length - 3];
+        }
+        
+        // get the image using the original imageNamed implementation
+        UIImage *image = [self nextfazeImageNamed:[newName stringByAppendingPathExtension:extension]];
+
+        // check scale property has been set correctly
+        if(range2x.location != NSNotFound && image.scale != 2.0) {
+            // image scale should be set to 2.0, but isn't
+            // (this can happen when @2x is within the string, e.g. name-Portrait@2x~ipad)
+            NSString *path = [[NSBundle mainBundle] pathForResource:newName ofType:extension];
+            NSData *data = [NSData dataWithContentsOfFile:path];
+            image = [UIImage imageWithData:data scale:2.0];
+        }
+        //NFLog(@"image scale: %.1f", image.scale);
+        return image;
+    }
 
     // an image with a suffix was not found, call original implementation method
     return [self nextfazeImageNamed:imageName];
@@ -127,7 +146,7 @@ static BOOL isRetina = NO;
             }
         }
     }
-    
+
     //NFLog(@"suffix search list: %@", list);
 
     return list;
