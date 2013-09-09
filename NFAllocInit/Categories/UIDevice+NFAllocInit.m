@@ -17,8 +17,8 @@
         // identifierForVendor available in iOS 6.0 and later
         return [[self identifierForVendor] UUIDString];
     } else {
-        // uniqueIdentifier is deprecated
-        return [self uniqueIdentifier];
+        // uniqueIdentifier usage will stop app from being accepted by iTunes connect
+        return nil;
     }
 }
 #pragma clang diagnostic pop
