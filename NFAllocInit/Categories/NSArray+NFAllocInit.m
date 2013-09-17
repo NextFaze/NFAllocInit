@@ -80,6 +80,15 @@
     return [self detect:block];
 }
 
+- (id)reject:(NFAllocInitTestBlock)block {
+    NSMutableArray *array = [NSMutableArray array];
+    for(id object in self) {
+        if(!block(object))
+            [array addObject:object];
+    }
+    return array;
+}
+
 - (NSArray *)findAll:(NFAllocInitTestBlock)block {
     NSMutableArray *array = [NSMutableArray array];
     for(id object in self) {

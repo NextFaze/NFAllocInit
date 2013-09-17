@@ -30,6 +30,7 @@ typedef id<NFAllocInitComparisonMethods> (^NFAllocInitComparableObjectBlock)(id 
 - (NSArray *)map:(NFAllocInitObjectBlock)block;
 - (void)cycle:(int)count block:(NFAllocInitObjectBlock)block;
 - (id)detect:(NFAllocInitTestBlock)block;
+- (id)reject:(NFAllocInitTestBlock)block;
 - (id)find:(NFAllocInitTestBlock)block;
 - (NSArray *)findAll:(NFAllocInitTestBlock)block;
 - (NSArray *)select:(NFAllocInitTestBlock)block;
