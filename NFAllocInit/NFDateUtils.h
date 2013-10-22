@@ -13,6 +13,8 @@
 
 @interface NFDateUtils : NSObject
 
++ (NSString *)stringFromTimeInterval:(NSTimeInterval)timeInterval;
+
 + (NSString *)stringFromDate:(NSDate *)date;
 + (NSString *)stringFromDate:(NSDate *)date withStyle:(NSDateFormatterStyle)style;
 + (NSString *)stringFromDate:(NSDate *)date withFormat:(NSString *)dateFormat;
