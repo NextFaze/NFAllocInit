@@ -91,17 +91,6 @@
     return retval;
 }
 
-
-+ (void) setDefaultStyleForLabel:(UILabel*)pLabel
-{
-    [pLabel setBackgroundColor:[UIColor clearColor]];
-    [pLabel setTextColor:[UIColor whiteColor]];
-    [pLabel setTextAlignment:ALIGN_CENTER];
-    [pLabel setShadowColor:[UIColor blackColor]];
-    [pLabel setShadowOffset:CGSizeMake(2.0, 2.0)];
-    [pLabel setAdjustsFontSizeToFitWidth:YES];
-} 
-
 + (void)logRect:(CGRect)rect withDescription:(NSString*)description
 {
     NSLog(@"%@: x:%f y:%f width:%f height:%f", description, rect.origin.x, rect.origin.y, rect.size.width, rect.size.height);
