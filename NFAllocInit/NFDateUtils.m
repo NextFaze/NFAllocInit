@@ -10,6 +10,14 @@
 
 @implementation NFDateUtils
 
++ (NSString *)stringForValue:(NSUInteger)value withNonPluralUnit:(NSString *)unit
+{
+    if (value == 1) {
+        return [NSString stringWithFormat:@"%d %@", value, unit];
+    }
+    return [NSString stringWithFormat:@"%d %@s", value, unit];
+}
+
 + (NSString *)stringFromTimeInterval:(NSTimeInterval)timeInterval
 {
     NSUInteger time = (NSUInteger)timeInterval;
@@ -21,15 +29,15 @@
     
     NSString *string = nil;
     if (weeks > 0) {
-        string = [NSString stringWithFormat:@"%d weeks", weeks];
+        string = [self stringForValue:weeks withNonPluralUnit:@"week"];
     } else if (days > 0) {
-        string = [NSString stringWithFormat:@"%d days", days];
+        string = [self stringForValue:days withNonPluralUnit:@"day"];
     } else if (hours > 0) {
-        string = [NSString stringWithFormat:@"%d hours", hours];
+        string = [self stringForValue:hours withNonPluralUnit:@"hour"];
     } else if (minutes > 0) {
-        string = [NSString stringWithFormat:@"%d minutes", minutes];
+        string = [self stringForValue:minutes withNonPluralUnit:@"minute"];
     } else {
-        string = [NSString stringWithFormat:@"%d seconds", seconds];
+        string = [self stringForValue:seconds withNonPluralUnit:@"second"];
     }
     
     return string;
