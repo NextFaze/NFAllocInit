@@ -35,8 +35,16 @@
 @implementation UIImage (NFAllocInit_Paths)
 
 static BOOL isRetina = NO;
+static BOOL isLoaded = NO;
 
-+ (void) load {
++ (void)initialize {
+    @synchronized(self) {
+        // avoid running this code twice
+        // this is called twice when running unit tests for some reason
+        if(isLoaded) return;
+        isLoaded = YES;
+    }
+    
     Method m1 = class_getInstanceMethod(NSClassFromString(@"UIImageNibPlaceholder"), @selector(initWithCoder:));
     Method m2 = class_getInstanceMethod(self, @selector(nextfazeInitWithCoder:));
     method_exchangeImplementations(m1, m2);
