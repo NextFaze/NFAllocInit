@@ -19,6 +19,10 @@
     return NO;
 }
 
++ (float)systemVersion {
+    return [[[UIDevice currentDevice] systemVersion] floatValue];
+}
+
 + (BOOL)isPad
 {
     return [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad;
