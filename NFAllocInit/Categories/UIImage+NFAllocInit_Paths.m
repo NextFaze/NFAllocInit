@@ -27,6 +27,7 @@
 
 #define DEFAULT_EXTENSION @"png"
 #define IMAGE_EXTENSION(imageName) ([imageName pathExtension].length ? [imageName pathExtension] : DEFAULT_EXTENSION)
+#define UIInterfaceOrientationUnknown -1
 
 @interface NSBundle ()
 - (NSString *)nextfazePathForResource:(NSString *)name ofType:(NSString *)ext;
@@ -93,7 +94,16 @@ static BOOL isLoaded = NO;
             // (this can happen when @2x is within the string, e.g. name-Portrait@2x~ipad)
             NSString *path = [[NSBundle mainBundle] pathForResource:newName ofType:extension];
             NSData *data = [NSData dataWithContentsOfFile:path];
-            image = [UIImage imageWithData:data scale:2.0];
+            
+#ifdef APPORTABLE
+            image = [UIImage imageWithData:data];
+#else
+            if([NFDeviceUtils systemVersion] >= 6)
+                image = [UIImage imageWithData:data scale:2.0]; // iOS 6+ interface
+            else
+                image = [UIImage imageWithData:data];
+#endif
+            
         }
         //NFLog(@"image scale: %.1f", image.scale);
         return image;
@@ -104,7 +114,7 @@ static BOOL isLoaded = NO;
 }
 
 + (UIImage *)nextfazeImageNamed:(NSString *)imageName {
-    UIInterfaceOrientation orientation = UIDeviceOrientationUnknown;
+    UIInterfaceOrientation orientation = (UIInterfaceOrientation) UIInterfaceOrientationUnknown;
     return [self imageNamed:imageName orientation:orientation];
 }
 
@@ -135,7 +145,7 @@ static BOOL isLoaded = NO;
 // <basename><orientation_modifier/usage_modifier><scale_modifier><device_modifier>.png
 + (NSArray *)suffixSearchPathOrientation:(UIInterfaceOrientation)orientation {
     NSMutableArray *list = [NSMutableArray array];
-    NSString *orientationModifier = (orientation == UIDeviceOrientationUnknown ? @"SKIP" :
+    NSString *orientationModifier = (orientation == (UIInterfaceOrientation) UIInterfaceOrientationUnknown ? @"SKIP" :
                                      UIInterfaceOrientationIsPortrait(orientation) ? @"-Portrait" : @"-Landscape");
     NSString *orientationModifier2 = orientation == UIInterfaceOrientationPortraitUpsideDown ? @"-PortraintUpsideDown" : @"SKIP";
     NSString *usageModifier = [NFDeviceUtils is4inch] ? @"-568h" : @"SKIP";

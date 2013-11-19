@@ -9,10 +9,6 @@
 
 @implementation NSArray (NFAllocInit)
 
-- (id)firstObject {
-    return self.count == 0 ? nil : [self objectAtIndex:0];
-}
-
 - (id)objectAtIndexFTW:(NSUInteger)index {
     return index < self.count ? [self objectAtIndex:index] : nil;
 }

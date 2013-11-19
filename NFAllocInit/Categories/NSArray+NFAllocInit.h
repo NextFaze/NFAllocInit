@@ -19,7 +19,6 @@ typedef id (^NFAllocInitObjectBlock)(id object);
 typedef id<NFAllocInitComparisonMethods> (^NFAllocInitComparableObjectBlock)(id object);
 
 @interface NSArray (NFAllocInit)
-- (id)firstObject;
 - (id)objectAtIndexFTW:(NSUInteger)index;
 - (NSArray *)shuffle;
 
