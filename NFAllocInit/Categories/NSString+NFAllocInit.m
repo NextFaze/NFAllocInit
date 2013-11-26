@@ -33,4 +33,12 @@
     return [[self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length] == 0;
 }
 
+// this method is more useful than isBlank, because it will also work with nil receivers, e.g.
+//  [nil isNotBlank] == false
+//  ["" isNotBlank] == false
+//  ["foo" isNotBlank] == true
+- (BOOL)isNotBlank {
+    return [[self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length] != 0;
+}
+
 @end

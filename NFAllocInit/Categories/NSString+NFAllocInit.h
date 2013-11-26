@@ -12,5 +12,6 @@
 - (NSString *)stringByURLEncoding;
 - (NSString *)md5;
 - (BOOL)isBlank;
+- (BOOL)isNotBlank;
 
 @end
