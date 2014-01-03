@@ -56,15 +56,11 @@
     AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
     [player setDelegate:self];
     
-    if (player)
-    {
-        //float volume = 1.0;
-        //[player setVolume:volume];
+    if (player) {
 		[player play];
         [self.players addObject:player]; //need to keep a reference or else ARC will release player before it plays
-    }
-    else
-    {
+    
+    } else {
 		NFLog(@"ERROR: Failed to play effect %@ due to error %@", fileName, [error description]);
     }
 }
@@ -72,6 +68,26 @@
 + (void)playSound:(NSString *)fileName
 {
     [[NFAudioPlayer sharedPlayer] playSound:fileName];
+}
+
+- (void)playSoundWithURL:(NSURL *)URL
+{
+    NSError *error;
+    AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:URL error:&error];
+    [player setDelegate:self];
+    
+    if (player) {
+		[player play];
+        [self.players addObject:player]; //need to keep a reference or else ARC will release player before it plays
+    
+    } else {
+		NFLog(@"ERROR: Failed to play effect %@ due to error %@", URL, [error description]);
+    }
+}
+
++ (void)playSoundWithURL:(NSURL *)URL
+{
+    [[NFAudioPlayer sharedPlayer] playSoundWithURL:URL];
 }
 
 #pragma mark - AVAudioPlayerDelegate

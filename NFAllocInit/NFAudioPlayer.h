@@ -16,5 +16,7 @@
 - (void)playSound:(NSString *)fileName;
 + (void)playSound:(NSString *)fileName;
 
+- (void)playSoundWithURL:(NSURL *)URL;
++ (void)playSoundWithURL:(NSURL *)URL;
 
 @end
