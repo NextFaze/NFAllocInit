@@ -12,4 +12,6 @@
 
 @property (nonatomic, readonly) CGFloat aspect;
 
+- (UIImage *)blurredImage;
+
 @end
