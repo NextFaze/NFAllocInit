@@ -11,6 +11,7 @@
 #import "NFDateUtils.h"
 #import "NFDelegateSet.h"
 #import "NFDeviceUtils.h"
+#import "NFTimerTarget.h"
 #import "NSArray+NFAllocInit.h"
 #import "NSData+NFAllocInit.h"
 #import "NSError+NFAllocInit.h"
