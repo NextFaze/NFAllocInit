@@ -33,7 +33,7 @@
 
 + (void)showAlertWithError:(NSError *)error
 {
-    [NFViewUtils showAlertWithTitle:@"An error occured" andMessage:error.localizedDescription];
+    [NFViewUtils showAlertWithTitle:@"An error occurred" andMessage:error.localizedDescription];
 }
 
 + (void)printAvailableFonts
