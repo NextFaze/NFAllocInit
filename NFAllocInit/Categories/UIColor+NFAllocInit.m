@@ -74,7 +74,7 @@
     CGColorRef color = [self CGColor];
     NSString *titleColour = nil;
     
-    int numComponents = CGColorGetNumberOfComponents(color);
+    size_t numComponents = CGColorGetNumberOfComponents(color);
     if (numComponents>=3 ) {
         const CGFloat *components = CGColorGetComponents(color);
         CGFloat red = components[0];
@@ -92,7 +92,7 @@
     CGColorRef color = [self CGColor];
     NSString *titleColour = nil;
     
-    int numComponents = CGColorGetNumberOfComponents(color);
+    size_t numComponents = CGColorGetNumberOfComponents(color);
     if (numComponents >= 4) {
         const CGFloat *components = CGColorGetComponents(color);
         CGFloat red = components[0];
@@ -118,7 +118,7 @@
 	CGFloat *oldComponents = (CGFloat *)CGColorGetComponents([self CGColor]);
 	CGFloat newComponents[4];
     
-	int numComponents = CGColorGetNumberOfComponents([self CGColor]);
+	size_t numComponents = CGColorGetNumberOfComponents([self CGColor]);
     
 	switch (numComponents)
 	{
@@ -163,7 +163,7 @@
 	CGFloat *oldComponents = (CGFloat *)CGColorGetComponents([self CGColor]);
 	CGFloat newComponents[4];
     
-	int numComponents = CGColorGetNumberOfComponents([self CGColor]);
+	size_t numComponents = CGColorGetNumberOfComponents([self CGColor]);
     
 	switch (numComponents)
 	{
@@ -202,7 +202,7 @@
 	// oldComponents is the array INSIDE the original color
 	// changing these changes the original, so we copy it
 	CGFloat *oldComponents = (CGFloat *)CGColorGetComponents([self CGColor]);
-	int numComponents = CGColorGetNumberOfComponents([self CGColor]);
+	size_t numComponents = CGColorGetNumberOfComponents([self CGColor]);
 	CGFloat newComponents[4];
     
 	switch (numComponents)

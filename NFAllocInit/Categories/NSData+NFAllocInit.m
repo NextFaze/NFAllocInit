@@ -15,13 +15,13 @@
 	
 	char *alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 	
-    int encodedLength = (((([plainText length] % 3) + [plainText length]) / 3) * 4) + 1;  
+    unsigned long encodedLength = (((([plainText length] % 3) + [plainText length]) / 3) * 4) + 1;
     unsigned char *outputBuffer = malloc(encodedLength);  
     unsigned char *inputBuffer = (unsigned char *)[plainText bytes];  
 	
     NSInteger i;  
     NSInteger j = 0;  
-    int remain;  
+    unsigned long remain;
 	
     for(i = 0; i < [plainText length]; i += 3) {  
         remain = [plainText length] - i;  
@@ -61,7 +61,7 @@
 
 - (NSString *)md5 {
     NSMutableData *result = [NSMutableData dataWithCapacity:CC_MD5_DIGEST_LENGTH];
-    CC_MD5(self.bytes, [self length], result.mutableBytes);
+    CC_MD5(self.bytes, (CC_LONG) [self length], result.mutableBytes);
     return [result hexadecimal];
 }
 

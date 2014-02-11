@@ -13,9 +13,9 @@
 + (NSString *)stringForValue:(NSUInteger)value withNonPluralUnit:(NSString *)unit
 {
     if (value == 1) {
-        return [NSString stringWithFormat:@"%d %@", value, unit];
+        return [NSString stringWithFormat:@"%lu %@", (unsigned long)value, unit];
     }
-    return [NSString stringWithFormat:@"%d %@s", value, unit];
+    return [NSString stringWithFormat:@"%lu %@s", (unsigned long)value, unit];
 }
 
 + (NSString *)stringFromTimeInterval:(NSTimeInterval)timeInterval
