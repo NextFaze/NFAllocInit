@@ -63,6 +63,8 @@
 
 + (NSString *)stringFromDate:(NSDate *)date withFormat:(NSString *)dateFormat
 {
+    if(date == nil) return @"";
+    
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = dateFormat;
     
