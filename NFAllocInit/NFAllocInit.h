@@ -12,6 +12,7 @@
 #import "NFDelegateSet.h"
 #import "NFDeviceUtils.h"
 #import "NFTimerTarget.h"
+#import "NFProperty.h"
 #import "NSArray+NFAllocInit.h"
 #import "NSData+NFAllocInit.h"
 #import "NSError+NFAllocInit.h"
@@ -25,3 +26,4 @@
 #import "UIView+Additions.h"
 #import "UIView+FrameAdjustments.h"
 #import "UIDevice+NFAllocInit.h"
+#import "NSObject+NFAllocInit_Properties.h"

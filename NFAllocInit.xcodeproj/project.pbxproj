@@ -33,6 +33,8 @@
 		B539BA3717B0AC16005E3B2E /* UIColor+NFAllocInit.m in Sources */ = {isa = PBXBuildFile; fileRef = B539BA3617B0AC16005E3B2E /* UIColor+NFAllocInit.m */; };
 		B5839369178B99EB002B7075 /* UIDevice+NFAllocInit.m in Sources */ = {isa = PBXBuildFile; fileRef = B5839368178B99EB002B7075 /* UIDevice+NFAllocInit.m */; };
 		B5B1E811189F4D3C00E1F341 /* NFTimerTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B1E810189F4D3C00E1F341 /* NFTimerTarget.m */; };
+		B5DC3EB118B59EC2004CBEF0 /* NFProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC3EB018B59EC2004CBEF0 /* NFProperty.m */; };
+		B5DC3EB418B5A006004CBEF0 /* NSObject+NFAllocInit_Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC3EB318B5A006004CBEF0 /* NSObject+NFAllocInit_Properties.m */; };
 		B5F72B8E17D863F50015D59C /* UIImage+NFAllocInit_Paths.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F72B8C17D863F50015D59C /* UIImage+NFAllocInit_Paths.m */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +101,10 @@
 		B5839368178B99EB002B7075 /* UIDevice+NFAllocInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+NFAllocInit.m"; sourceTree = "<group>"; };
 		B5B1E80F189F4D3C00E1F341 /* NFTimerTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFTimerTarget.h; sourceTree = "<group>"; };
 		B5B1E810189F4D3C00E1F341 /* NFTimerTarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFTimerTarget.m; sourceTree = "<group>"; };
+		B5DC3EAF18B59EC2004CBEF0 /* NFProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFProperty.h; sourceTree = "<group>"; };
+		B5DC3EB018B59EC2004CBEF0 /* NFProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFProperty.m; sourceTree = "<group>"; };
+		B5DC3EB218B5A006004CBEF0 /* NSObject+NFAllocInit_Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NFAllocInit_Properties.h"; sourceTree = "<group>"; };
+		B5DC3EB318B5A006004CBEF0 /* NSObject+NFAllocInit_Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NFAllocInit_Properties.m"; sourceTree = "<group>"; };
 		B5F72B8C17D863F50015D59C /* UIImage+NFAllocInit_Paths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+NFAllocInit_Paths.m"; sourceTree = "<group>"; };
 		B5F72B9017D864370015D59C /* UIImage+NFAllocInit_Paths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+NFAllocInit_Paths.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +132,8 @@
 			children = (
 				B5F72B9017D864370015D59C /* UIImage+NFAllocInit_Paths.h */,
 				B5F72B8C17D863F50015D59C /* UIImage+NFAllocInit_Paths.m */,
+				B5DC3EB218B5A006004CBEF0 /* NSObject+NFAllocInit_Properties.h */,
+				B5DC3EB318B5A006004CBEF0 /* NSObject+NFAllocInit_Properties.m */,
 				7CAAE53F166EB8EF0070636C /* NSArray+NFAllocInit.h */,
 				7CAAE540166EB8EF0070636C /* NSArray+NFAllocInit.m */,
 				7CAAE541166EB8EF0070636C /* NSData+NFAllocInit.h */,
@@ -205,6 +213,7 @@
 				7C1FE6B0171FC4320069499C /* NFDeviceUtils.m */,
 				B5B1E80F189F4D3C00E1F341 /* NFTimerTarget.h */,
 				B5B1E810189F4D3C00E1F341 /* NFTimerTarget.m */,
+				B5DC3EAE18B59EA5004CBEF0 /* Reflection */,
 				7CAAE53E166EB8EF0070636C /* Categories */,
 				7CEFCDC4166DCB7500B0FB6A /* Supporting Files */,
 			);
@@ -217,6 +226,15 @@
 				7CEFCDC5166DCB7500B0FB6A /* NFAllocInit-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B5DC3EAE18B59EA5004CBEF0 /* Reflection */ = {
+			isa = PBXGroup;
+			children = (
+				B5DC3EAF18B59EC2004CBEF0 /* NFProperty.h */,
+				B5DC3EB018B59EC2004CBEF0 /* NFProperty.m */,
+			);
+			name = Reflection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +293,8 @@
 				B5B1E811189F4D3C00E1F341 /* NFTimerTarget.m in Sources */,
 				7CAAE54F166EB8EF0070636C /* NSArray+NFAllocInit.m in Sources */,
 				7CAAE550166EB8EF0070636C /* NSData+NFAllocInit.m in Sources */,
+				B5DC3EB118B59EC2004CBEF0 /* NFProperty.m in Sources */,
+				B5DC3EB418B5A006004CBEF0 /* NSObject+NFAllocInit_Properties.m in Sources */,
 				7CAAE551166EB8EF0070636C /* NSString+NFAllocInit.m in Sources */,
 				7CAAE552166EB8EF0070636C /* UIImage+Alpha.m in Sources */,
 				7CAAE553166EB8EF0070636C /* UIImage+Resize.m in Sources */,
