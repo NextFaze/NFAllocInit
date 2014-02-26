@@ -14,11 +14,11 @@
 
 @implementation NFTimerTarget
 
-+ (NSTimer *)scheduledTimerWithTimeInterval:(NSUInteger)timeInterval target:(id<NFTimerTargetDelegate>)target repeats:(BOOL)repeats {
++ (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)timeInterval target:(id<NFTimerTargetDelegate>)target repeats:(BOOL)repeats {
     return [self scheduledTimerWithTimeInterval:timeInterval target:target userInfo:nil repeats:repeats];
 }
 
-+ (NSTimer *)scheduledTimerWithTimeInterval:(NSUInteger)timeInterval target:(id<NFTimerTargetDelegate>)target userInfo:(NSDictionary *)userInfo repeats:(BOOL)repeats {
++ (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)timeInterval target:(id<NFTimerTargetDelegate>)target userInfo:(NSDictionary *)userInfo repeats:(BOOL)repeats {
     NFTimerTarget *timerTarget = [[NFTimerTarget alloc] init];
     timerTarget.realTarget = target;
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:timeInterval target:timerTarget selector:@selector(handleTimer:) userInfo:userInfo repeats:repeats];

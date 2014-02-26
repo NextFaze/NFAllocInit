@@ -17,7 +17,7 @@
 
 @interface NFTimerTarget : NSObject
 
-+ (NSTimer *)scheduledTimerWithTimeInterval:(NSUInteger)timeInterval target:(id<NFTimerTargetDelegate>)target repeats:(BOOL)repeats;
-+ (NSTimer *)scheduledTimerWithTimeInterval:(NSUInteger)timeInterval target:(id<NFTimerTargetDelegate>)target userInfo:(NSDictionary *)userInfo repeats:(BOOL)repeats;
++ (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)timeInterval target:(id<NFTimerTargetDelegate>)target repeats:(BOOL)repeats;
++ (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)timeInterval target:(id<NFTimerTargetDelegate>)target userInfo:(NSDictionary *)userInfo repeats:(BOOL)repeats;
 
 @end
