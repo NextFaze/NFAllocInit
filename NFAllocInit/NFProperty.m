@@ -91,7 +91,7 @@
         self.pointerLevel = 1;
     } else if([propertyType characterAtIndex:1] == '^') {
         // pointer, e.g. T^i
-        self.pointerLevel = [propertyType length] - 2;  // e.g T^^i == int **value;
+        self.pointerLevel = (int)[propertyType length] - 2;  // e.g T^^i == int **value;
         self.valueType = [self propertyDataType:propertyType];
     } else {
         // primitive, e.g. Ti
