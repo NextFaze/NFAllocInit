@@ -76,6 +76,17 @@
     return [self detect:block];
 }
 
+- (id)findByKey:(NSString *)key value:(id)value {
+    return [self find:^BOOL(id object) {
+        @try {
+            id objectValue = [object valueForKey:key];
+            return [objectValue isEqual:value];
+        } @catch(NSException *e) {
+            return false;
+        }
+    }];
+}
+
 - (id)reject:(NFAllocInitTestBlock)block {
     NSMutableArray *array = [NSMutableArray array];
     for(id object in self) {
