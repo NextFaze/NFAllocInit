@@ -43,7 +43,7 @@
             
             [property processPropertyType:propertyType];
             
-            //NFLog(@"property: %@", property);
+            //NFLog(@"property: %@ (%@)", property, property.valueClass);
             
             [list addObject:property];
         }
@@ -52,6 +52,16 @@
     
     return list;
 }
+
++ (NSDictionary *)propertiesDictionaryFromClass:(Class)klass {
+    NSArray *properties = [self propertiesFromClass:klass];
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    for(NFProperty *property in properties) {
+        [dict setValue:property forKey:property.name];
+    }
+    return dict;
+}
+
 
 - (NSString *)description {
     return [NSString stringWithFormat:@"%@ %.*s%@",

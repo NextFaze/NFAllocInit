@@ -37,5 +37,6 @@ typedef enum {
 - (BOOL)isPointer;
 
 + (NSArray *)propertiesFromClass:(Class)klass;
++ (NSDictionary *)propertiesDictionaryFromClass:(Class)klass;
 
 @end
