@@ -54,8 +54,8 @@ static BOOL isLoaded = NO;
     Method m4 = class_getClassMethod(self, @selector(nextfazeImageNamed:));
     method_exchangeImplementations(m3, m4);
     
-    isRetina = ([[UIScreen mainScreen] respondsToSelector:@selector(scale)] == YES && [[UIScreen mainScreen] scale] == 2.00);
-    NFLog(@"isRetina: %@", isRetina ? @"YES" : @"NO");
+    isRetina = ([[UIScreen mainScreen] respondsToSelector:@selector(scale)] == YES && [[UIScreen mainScreen] scale] > 1.00);
+    NFLog(@"isRetina: %@, scale: %.1f", isRetina ? @"YES" : @"NO", [[UIScreen mainScreen] scale]);
 }
 
 - (id)nextfazeInitWithCoder:(NSCoder *)aDecoder {
@@ -79,18 +79,21 @@ static BOOL isLoaded = NO;
     
     // if an image with a suffix was found, return it
     if(newName) {
-        NSRange range2x = [newName rangeOfString:@"@2x"];
-        if([newName hasSuffix:@"@2x"]) {
-            // if the suffix is @2x, we can drop it, because the original implementation will find it and set the scale correctly
+        BOOL hasScaleSuffix = NO;
+        float expectedScale = [self scaleForImageNamed:newName];
+        //NFLog(@"image: %@, expected scale: %.1f", newName, expectedScale);
+        if(expectedScale > 1) {
+            // if there is a scale suffix (e.g. @2x, @3x), we can drop it, because the original imageNamed implementation will find it and set the scale correctly
             newName = [newName substringToIndex:newName.length - 3];
+            hasScaleSuffix = YES;
         }
         
         // get the image using the original imageNamed implementation
         UIImage *image = [self nextfazeImageNamed:[newName stringByAppendingPathExtension:extension]];
 
         // check scale property has been set correctly
-        if(range2x.location != NSNotFound && image.scale != 2.0) {
-            // image scale should be set to 2.0, but isn't
+        if(image.scale != expectedScale) {
+            // image scale is incorrectly set
             // (this can happen when @2x is within the string, e.g. name-Portrait@2x~ipad)
             NSString *path = [[NSBundle mainBundle] pathForResource:newName ofType:extension];
             NSData *data = [NSData dataWithContentsOfFile:path];
@@ -99,7 +102,7 @@ static BOOL isLoaded = NO;
             image = [UIImage imageWithData:data];
 #else
             if([NFDeviceUtils systemVersion] >= 6)
-                image = [UIImage imageWithData:data scale:2.0]; // iOS 6+ interface
+                image = [UIImage imageWithData:data scale:expectedScale]; // iOS 6+ interface
             else
                 image = [UIImage imageWithData:data];
 #endif
@@ -113,6 +116,13 @@ static BOOL isLoaded = NO;
     return [self nextfazeImageNamed:imageName];
 }
 
++ (float)scaleForImageNamed:(NSString *)imageName {
+    // name@2x
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"@([2-9])x$" options:0 error:NULL];
+    NSTextCheckingResult *match = [regex firstMatchInString:imageName options:0 range:NSMakeRange(0, [imageName length])];
+    return match ? [[imageName substringWithRange:[match rangeAtIndex:1]] floatValue] : 1;
+}
+
 + (UIImage *)nextfazeImageNamed:(NSString *)imageName {
     UIInterfaceOrientation orientation = (UIInterfaceOrientation) UIInterfaceOrientationUnknown;
     return [self imageNamed:imageName orientation:orientation];
@@ -122,8 +132,8 @@ static BOOL isLoaded = NO;
     NSString *extension = IMAGE_EXTENSION(imageName);
     NSString *name = [imageName stringByDeletingPathExtension];
     
-    // remove any @2x component of image name
-    if([name hasSuffix:@"@2x"])
+    // remove any @2x / @3x component of image name
+    if([name hasSuffix:@"@2x"] || [name hasSuffix:@"@3x"])
         name = [name substringToIndex:name.length - 3];
     
     // get the list of suffixes to search
@@ -177,10 +187,11 @@ static BOOL isLoaded = NO;
 
 + (NSArray *)retinaScaleModifiers {
     NSMutableArray *list = [NSMutableArray array];
+    [list addObject:@"@3x"];
     [list addObject:@"@2x"];
     [list addObject:@""];
 
-    // if on a non-retina device, look for images without a @2x extension first
+    // if on a non-retina device, look for images without asset extensions first
     return isRetina ? list : [[list reverseObjectEnumerator] allObjects];
 }
 
