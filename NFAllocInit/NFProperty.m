@@ -25,47 +25,88 @@
     return self.pointerLevel > 0;
 }
 
-+ (NSArray *)propertiesFromClass:(Class)klass {
-    NSMutableArray *list = [NSMutableArray array];
-    
-    unsigned int outCount, i;
-    objc_property_t *properties = class_copyPropertyList(klass, &outCount);
-    for(i = 0; i < outCount; i++) {
-        objc_property_t property = properties[i];
-        const char *propName = property_getName(property);
-        if(propName) {
-            NSString *propertyName = [NSString stringWithCString:propName
-                                                        encoding:[NSString defaultCStringEncoding]];
-            NSString *propertyType = [self propertyType:property];
-            
-            NFProperty *property = [[NFProperty alloc] init];
-            property.name = propertyName;
-            
-            [property processPropertyType:propertyType];
-            
-            //NFLog(@"property: %@ (%@)", property, property.valueClass);
-            
-            [list addObject:property];
-        }
-    }
-    free(properties);
-    
-    return list;
-}
-
 + (NSDictionary *)propertiesDictionaryFromClass:(Class)klass {
-    NSArray *properties = [self propertiesFromClass:klass];
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    for(NFProperty *property in properties) {
+    for(NFProperty *property in [self propertiesFromClass:klass]) {
         [dict setValue:property forKey:property.name];
     }
     return dict;
 }
 
++ (NSArray *)propertiesFromClass:(Class)klass {
+    NSMutableArray *list = [NSMutableArray array];
+    unsigned int outCount, i;
+    
+    while(klass != [NSObject class]) {
+        objc_property_t *properties = class_copyPropertyList(klass, &outCount);
+        for(i = 0; i < outCount; i++) {
+            objc_property_t property = properties[i];
+            const char *propName = property_getName(property);
+            if(propName) {
+                NSArray *attributes = [NFProperty attributesOfProperty:property];
+                NSString *propertyName = [NSString stringWithUTF8String:propName];
+                
+                NFProperty *property = [[NFProperty alloc] init];
+                property.name = propertyName;
+                property.attributes = attributes;
+                
+                //LOG(@"property: %@", property);
+                
+                [list addObject:property];
+            }
+        }
+        free(properties);
+
+        klass = [klass superclass];
+    }
+    return list;
+}
+
+- (void)setAttributes:(NSArray *)attributes {
+    NSString *propertyType = nil;
+    _attributes = attributes;
+    
+    for(NSString *attribute in attributes) {
+        if([attribute hasPrefix:@"T"] && !propertyType) {
+           propertyType = attribute;
+        }
+        else if([attribute isEqualToString:@"R"]) {
+            _readonly = YES;
+        }
+        else if([attribute isEqualToString:@"W"]) {
+            _weak = YES;
+        }
+        else if([attribute isEqualToString:@"N"]) {
+            _nonatomic = YES;
+        }
+        else if([attribute isEqualToString:@"C"]) {
+            _copy = YES;
+        }
+        else if([attribute isEqualToString:@"D"]) {
+            _dynamic = YES;
+        }
+        else if([attribute isEqualToString:@"&"]) {
+            _strong = YES;
+        }
+    }
+    
+    [self processPropertyType:propertyType];
+}
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"%@ %.*s%@",
-            [self dataTypeToString], self.pointerLevel, "***************", self.name];
+    NSMutableArray *modifiers = [NSMutableArray array];
+
+    [modifiers addObject:self.nonatomic ? @"nonatomic" : @"atomic"];
+    if(self.weak) [modifiers addObject:@"weak"];
+    if(self.copy) [modifiers addObject:@"copy"];
+    if(self.readonly) [modifiers addObject:@"readonly"];
+    if(self.strong) [modifiers addObject:@"strong"];
+    if(self.dynamic) [modifiers addObject:@"dynamic"];
+    
+    return [NSString stringWithFormat:@"(%@) %@ %.*s%@ (class %@)",
+            [modifiers componentsJoinedByString:@", "],
+            [self dataTypeToString], self.pointerLevel, "***************", self.name,
+            NSStringFromClass(self.valueClass)];
 }
 
 - (NSString *)dataTypeToString {
@@ -107,7 +148,7 @@
         // primitive, e.g. Ti
         self.valueType = [self propertyDataType:propertyType];
     }
-
+    
     // special case T* = char *, T^* == char **
     if([propertyType hasSuffix:@"*"])
         self.pointerLevel++;
@@ -115,7 +156,7 @@
 
 - (NFPropertyDataType)propertyDataType:(NSString *)propertyType {
     unichar ptype = [propertyType characterAtIndex:[propertyType length] - 1];
-
+    
     switch(ptype) {
         case 'i':
             return NFPropertyDataTypeInt;
@@ -126,14 +167,16 @@
         case 'L':
             return NFPropertyDataTypeUnsignedLong;
         case 'c':
+        case 'B':  // boolean, only returned by newer devices
             return NFPropertyDataTypeChar;
         case 'C':
             return NFPropertyDataTypeUnsignedChar;
         case '*':
             return NFPropertyDataTypeChar;  // char *
+        default:
+            LOG(@"unhandled property type: %c", ptype);
+            return NFPropertyDataTypeUnknown;
     }
-    
-    return NFPropertyDataTypeUnknown;
 }
 
 - (Class)propertyTypeClass:(NSString *)propertyType {
@@ -145,18 +188,11 @@
     return nil;
 }
 
-+ (NSString *)propertyType:(objc_property_t)property {
-    const char *attributes = property_getAttributes(property);
-    char buffer[1 + strlen(attributes)];
-    strcpy(buffer, attributes);
-    char *state = buffer, *attribute;
-    while ((attribute = strsep(&state, ",")) != NULL) {
-        //NFLog(@"attr: %s", attribute);
-        if (attribute[0] == 'T') {
-            return [NSString stringWithCString:attribute encoding:[NSString defaultCStringEncoding]];
-        }
-    }
-    return nil;
++ (NSArray *)attributesOfProperty:(objc_property_t)property {
+    const char * propAttr = property_getAttributes(property);
+    NSString *propString = [NSString stringWithUTF8String:propAttr];
+    NSArray *attrArray = [propString componentsSeparatedByString:@","];
+    return attrArray;
 }
 
 @end
