@@ -174,7 +174,7 @@
         case '*':
             return NFPropertyDataTypeChar;  // char *
         default:
-            LOG(@"unhandled property type: %c", ptype);
+            NFLog(@"unhandled property type: %c", ptype);
             return NFPropertyDataTypeUnknown;
     }
 }

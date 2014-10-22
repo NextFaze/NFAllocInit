@@ -79,13 +79,13 @@ static BOOL isLoaded = NO;
     
     // if an image with a suffix was found, return it
     if(newName) {
-        BOOL hasScaleSuffix = NO;
+        //BOOL hasScaleSuffix = NO;
         float expectedScale = [self scaleForImageNamed:newName];
         //NFLog(@"image: %@, expected scale: %.1f", newName, expectedScale);
         if(expectedScale > 1) {
             // if there is a scale suffix (e.g. @2x, @3x), we can drop it, because the original imageNamed implementation will find it and set the scale correctly
             newName = [newName substringToIndex:newName.length - 3];
-            hasScaleSuffix = YES;
+            //hasScaleSuffix = YES;
         }
         
         // get the image using the original imageNamed implementation
