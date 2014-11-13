@@ -50,7 +50,7 @@
                 property.name = propertyName;
                 property.attributes = attributes;
                 
-                //LOG(@"property: %@", property);
+                //NFLog(@"property: %@", property);
                 
                 [list addObject:property];
             }
@@ -127,6 +127,14 @@
             return @"unsigned long";
         case NFPropertyDataTypeUnknown:
             return @"?";
+        case NFPropertyDataTypeLongLong:
+            return @"long long";
+        case NFPropertyDataTypeUnsignedLongLong:
+            return @"unsigned long long";
+        case NFPropertyDataTypeShort:
+            return @"short";
+        case NFPropertyDataTypeUnsignedShort:
+            return @"unsigned short";
     }
 }
 
@@ -162,6 +170,10 @@
             return NFPropertyDataTypeInt;
         case 'I':
             return NFPropertyDataTypeUnsignedInt;
+        case 's':
+            return NFPropertyDataTypeShort;
+        case 'S':
+            return NFPropertyDataTypeUnsignedShort;
         case 'l':
             return NFPropertyDataTypeLong;
         case 'L':
@@ -173,6 +185,10 @@
             return NFPropertyDataTypeUnsignedChar;
         case '*':
             return NFPropertyDataTypeChar;  // char *
+        case 'Q':
+            return NFPropertyDataTypeUnsignedLongLong;
+        case 'q':
+            return NFPropertyDataTypeLongLong;
         default:
             NFLog(@"unhandled property type: %c", ptype);
             return NFPropertyDataTypeUnknown;
