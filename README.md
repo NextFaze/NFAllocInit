@@ -4,6 +4,12 @@ The starting point for an iOS app - helper classes and the like. Add this to you
 
 ## Integration instructions
 
+### Via CocoaPods
+
+    `pod 'NFAllocInit', :git => 'https://github.com/NextFaze/NFAllocInit.git'`
+
+### Via Submodules
+
 1. Add submodule to your project:
 
     `$ git submodule add git@github.com:NextfazeSD/NFAllocInit.git ThirdParty/NFAllocInit`
