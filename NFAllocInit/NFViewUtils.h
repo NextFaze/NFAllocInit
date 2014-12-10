@@ -19,6 +19,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 + (UIColor *)randomColor;
 + (UIColor *)randomColorWithAlpha:(float)alpha;
 
++ (UIImage *)imageWithColor:(UIColor *)color;
 + (UIImage *)imageWithColor:(UIColor *)color andSize:(CGSize)size;
 
 + (void)logRect:(CGRect)rect withDescription:(NSString*)description;

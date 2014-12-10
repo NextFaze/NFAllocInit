@@ -68,6 +68,11 @@
     return [UIColor colorWithRed:randR green:randG blue:randB alpha:alpha];
 }
 
++ (UIImage *)imageWithColor:(UIColor *)color
+{
+    return [NFViewUtils imageWithColor:color andSize:CGSizeMake(1.0, 1.0)];
+}
+
 + (UIImage *)imageWithColor:(UIColor *)color andSize:(CGSize)size
 {
     //Create a context of the appropriate size
