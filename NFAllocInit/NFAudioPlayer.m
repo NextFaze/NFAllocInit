@@ -33,10 +33,8 @@
     
     self.players = [NSMutableArray array];
     
-    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategorySoloAmbient error:nil];
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
     [[AVAudioSession sharedInstance] setActive:YES error: nil];
-    UInt32 route = kAudioSessionOverrideAudioRoute_Speaker;
-    AudioSessionSetProperty (kAudioSessionProperty_OverrideAudioRoute, sizeof(route), &route);
     
 	return self;
 }
