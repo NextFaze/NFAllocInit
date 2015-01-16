@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         			= "NFAllocInit"
-  s.version      			= "1.0.2"
+  s.version      			= "1.0.3"
   s.summary      			= "Helper classes for iOS App development"
   s.description  			= <<-DESC
                    			  The starting point for an iOS app - helper classes and the like. 
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.author       			= { "NextFaze Pty Ltd" => "contact@nextfaze.com" }
 
   s.platform     			= :ios, "6.0"
-  s.source       			= { :git => "https://github.com/NextfazeSD/NFAllocInit.git", :tag => "1.0.2" }
+  s.source       			= { :git => "https://github.com/NextfazeSD/NFAllocInit.git", :tag => "1.0.3" }
   s.source_files 			= "NFAllocInit", "NFAllocInit/**/*.{h,m}"
   s.frameworks   			= "AVFoundation", "AudioToolbox"
   s.requires_arc 			= true
