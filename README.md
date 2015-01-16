@@ -6,13 +6,13 @@ The starting point for an iOS app - helper classes and the like. Add this to you
 
 ### Via CocoaPods
 
-    `pod 'NFAllocInit', :git => 'https://github.com/NextFaze/NFAllocInit.git'`
+    pod 'NFAllocInit', :git => 'https://github.com/NextFaze/NFAllocInit.git'
 
 ### Via Submodules
 
 1. Add submodule to your project:
 
-    `$ git submodule add git@github.com:NextfazeSD/NFAllocInit.git ThirdParty/NFAllocInit`
+    $ git submodule add git@github.com:NextfazeSD/NFAllocInit.git ThirdParty/NFAllocInit
     
 2. Drag the NFAllocInit.xcodeproj project file from Finder to the ThirdParty folder in your project tree.
 3. Add `NFAllocInit` to target's Target Dependencies in Build Phases. 
