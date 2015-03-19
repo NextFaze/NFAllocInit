@@ -12,6 +12,7 @@
 		7C08B02C166DD02800012AA1 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C08B02B166DD02800012AA1 /* CoreImage.framework */; };
 		7C08B02E166DD03100012AA1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C08B02D166DD03100012AA1 /* CoreGraphics.framework */; };
 		7C1FE6B1171FC4330069499C /* NFDeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1FE6B0171FC4320069499C /* NFDeviceUtils.m */; };
+		7C3B52DA1ABA4B1900D78320 /* NFNetworkActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3B52D91ABA4B1900D78320 /* NFNetworkActivityIndicator.m */; };
 		7C9F4216170A51FD00495EDA /* NFAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4215170A51FD00495EDA /* NFAudioPlayer.m */; };
 		7C9F4218170A539000495EDA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C9F4217170A539000495EDA /* AVFoundation.framework */; };
 		7C9F421A170A53FB00495EDA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C9F4219170A53FB00495EDA /* AudioToolbox.framework */; };
@@ -58,6 +59,8 @@
 		7C08B02D166DD03100012AA1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		7C1FE6AF171FC4320069499C /* NFDeviceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFDeviceUtils.h; sourceTree = "<group>"; };
 		7C1FE6B0171FC4320069499C /* NFDeviceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFDeviceUtils.m; sourceTree = "<group>"; };
+		7C3B52D81ABA4B1900D78320 /* NFNetworkActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFNetworkActivityIndicator.h; sourceTree = "<group>"; };
+		7C3B52D91ABA4B1900D78320 /* NFNetworkActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFNetworkActivityIndicator.m; sourceTree = "<group>"; };
 		7C9F4214170A51FD00495EDA /* NFAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFAudioPlayer.h; sourceTree = "<group>"; };
 		7C9F4215170A51FD00495EDA /* NFAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFAudioPlayer.m; sourceTree = "<group>"; };
 		7C9F4217170A539000495EDA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -130,22 +133,26 @@
 		7CAAE53E166EB8EF0070636C /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				B5F72B9017D864370015D59C /* UIImage+NFAllocInit_Paths.h */,
-				B5F72B8C17D863F50015D59C /* UIImage+NFAllocInit_Paths.m */,
-				B5DC3EB218B5A006004CBEF0 /* NSObject+NFAllocInit_Properties.h */,
-				B5DC3EB318B5A006004CBEF0 /* NSObject+NFAllocInit_Properties.m */,
 				7CAAE53F166EB8EF0070636C /* NSArray+NFAllocInit.h */,
 				7CAAE540166EB8EF0070636C /* NSArray+NFAllocInit.m */,
 				7CAAE541166EB8EF0070636C /* NSData+NFAllocInit.h */,
 				7CAAE542166EB8EF0070636C /* NSData+NFAllocInit.m */,
 				7CABC8D717D6AEB0004C338D /* NSError+NFAllocInit.h */,
 				7CABC8D817D6AEB0004C338D /* NSError+NFAllocInit.m */,
+				B5DC3EB218B5A006004CBEF0 /* NSObject+NFAllocInit_Properties.h */,
+				B5DC3EB318B5A006004CBEF0 /* NSObject+NFAllocInit_Properties.m */,
 				7CAAE543166EB8EF0070636C /* NSString+NFAllocInit.h */,
 				7CAAE544166EB8EF0070636C /* NSString+NFAllocInit.m */,
-				B510A1FB17A213D2006E46E7 /* UIImage+NFAllocInit.h */,
-				B510A1FC17A213D2006E46E7 /* UIImage+NFAllocInit.m */,
+				B539BA3517B0AC16005E3B2E /* UIColor+NFAllocInit.h */,
+				B539BA3617B0AC16005E3B2E /* UIColor+NFAllocInit.m */,
+				B5839367178B99EB002B7075 /* UIDevice+NFAllocInit.h */,
+				B5839368178B99EB002B7075 /* UIDevice+NFAllocInit.m */,
 				7CAAE545166EB8EF0070636C /* UIImage+Alpha.h */,
 				7CAAE546166EB8EF0070636C /* UIImage+Alpha.m */,
+				B5F72B9017D864370015D59C /* UIImage+NFAllocInit_Paths.h */,
+				B5F72B8C17D863F50015D59C /* UIImage+NFAllocInit_Paths.m */,
+				B510A1FB17A213D2006E46E7 /* UIImage+NFAllocInit.h */,
+				B510A1FC17A213D2006E46E7 /* UIImage+NFAllocInit.m */,
 				7CAAE547166EB8EF0070636C /* UIImage+Resize.h */,
 				7CAAE548166EB8EF0070636C /* UIImage+Resize.m */,
 				7CAAE549166EB8EF0070636C /* UIImage+RoundedCorner.h */,
@@ -154,10 +161,6 @@
 				7CAAE54C166EB8EF0070636C /* UIView+Additions.m */,
 				7CAAE54D166EB8EF0070636C /* UIView+FrameAdjustments.h */,
 				7CAAE54E166EB8EF0070636C /* UIView+FrameAdjustments.m */,
-				B5839367178B99EB002B7075 /* UIDevice+NFAllocInit.h */,
-				B5839368178B99EB002B7075 /* UIDevice+NFAllocInit.m */,
-				B539BA3517B0AC16005E3B2E /* UIColor+NFAllocInit.h */,
-				B539BA3617B0AC16005E3B2E /* UIColor+NFAllocInit.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -198,23 +201,25 @@
 			isa = PBXGroup;
 			children = (
 				7CAAE519166EAF280070636C /* NFAllocInit.h */,
-				7C08B026166DCDE100012AA1 /* NFDebugging.h */,
 				7C9F4214170A51FD00495EDA /* NFAudioPlayer.h */,
 				7C9F4215170A51FD00495EDA /* NFAudioPlayer.m */,
-				7CEFCE33166DCDA400B0FB6A /* NFResourceUtils.h */,
-				7CEFCE34166DCDA400B0FB6A /* NFResourceUtils.m */,
-				7CEFCE35166DCDA400B0FB6A /* NFViewUtils.h */,
-				7CEFCE36166DCDA400B0FB6A /* NFViewUtils.m */,
 				7CA179D716F981D100841703 /* NFDateUtils.h */,
 				7CA179D816F981D100841703 /* NFDateUtils.m */,
+				7C08B026166DCDE100012AA1 /* NFDebugging.h */,
 				7CABC8DA17D6B35D004C338D /* NFDelegateSet.h */,
 				7CABC8DB17D6B35D004C338D /* NFDelegateSet.m */,
 				7C1FE6AF171FC4320069499C /* NFDeviceUtils.h */,
 				7C1FE6B0171FC4320069499C /* NFDeviceUtils.m */,
+				7C3B52D81ABA4B1900D78320 /* NFNetworkActivityIndicator.h */,
+				7C3B52D91ABA4B1900D78320 /* NFNetworkActivityIndicator.m */,
+				7CEFCE33166DCDA400B0FB6A /* NFResourceUtils.h */,
+				7CEFCE34166DCDA400B0FB6A /* NFResourceUtils.m */,
 				B5B1E80F189F4D3C00E1F341 /* NFTimerTarget.h */,
 				B5B1E810189F4D3C00E1F341 /* NFTimerTarget.m */,
-				B5DC3EAE18B59EA5004CBEF0 /* Reflection */,
+				7CEFCE35166DCDA400B0FB6A /* NFViewUtils.h */,
+				7CEFCE36166DCDA400B0FB6A /* NFViewUtils.m */,
 				7CAAE53E166EB8EF0070636C /* Categories */,
+				B5DC3EAE18B59EA5004CBEF0 /* Reflection */,
 				7CEFCDC4166DCB7500B0FB6A /* Supporting Files */,
 			);
 			path = NFAllocInit;
@@ -301,6 +306,7 @@
 				7CAAE554166EB8EF0070636C /* UIImage+RoundedCorner.m in Sources */,
 				7CAAE555166EB8EF0070636C /* UIView+Additions.m in Sources */,
 				7CAAE556166EB8EF0070636C /* UIView+FrameAdjustments.m in Sources */,
+				7C3B52DA1ABA4B1900D78320 /* NFNetworkActivityIndicator.m in Sources */,
 				7CA179D916F981D100841703 /* NFDateUtils.m in Sources */,
 				7C9F4216170A51FD00495EDA /* NFAudioPlayer.m in Sources */,
 				7C1FE6B1171FC4330069499C /* NFDeviceUtils.m in Sources */,
