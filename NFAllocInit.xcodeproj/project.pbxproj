@@ -61,6 +61,7 @@
 		7C1FE6B0171FC4320069499C /* NFDeviceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFDeviceUtils.m; sourceTree = "<group>"; };
 		7C3B52D81ABA4B1900D78320 /* NFNetworkActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFNetworkActivityIndicator.h; sourceTree = "<group>"; };
 		7C3B52D91ABA4B1900D78320 /* NFNetworkActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFNetworkActivityIndicator.m; sourceTree = "<group>"; };
+		7C3B52DB1ABA4D2B00D78320 /* NFAllocInit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = NFAllocInit.podspec; sourceTree = "<group>"; };
 		7C9F4214170A51FD00495EDA /* NFAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFAudioPlayer.h; sourceTree = "<group>"; };
 		7C9F4215170A51FD00495EDA /* NFAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFAudioPlayer.m; sourceTree = "<group>"; };
 		7C9F4217170A539000495EDA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -169,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				7CAAE68F166F0E400070636C /* README.md */,
+				7C3B52DB1ABA4D2B00D78320 /* NFAllocInit.podspec */,
 				7CEFCDC3166DCB7500B0FB6A /* NFAllocInit */,
 				7CEFCDC0166DCB7500B0FB6A /* Frameworks */,
 				7CEFCDBF166DCB7500B0FB6A /* Products */,
