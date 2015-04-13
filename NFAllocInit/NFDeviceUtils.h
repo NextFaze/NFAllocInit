@@ -13,7 +13,10 @@
 + (BOOL)isOSAtLeastVersion:(float)osVersion;
 + (float)systemVersion;
 + (BOOL)isPad;
++ (BOOL)is3_5inch;
 + (BOOL)is4inch;
++ (BOOL)is4_7inch;
++ (BOOL)is5_5inch;
 + (BOOL)isSimulator;
 + (BOOL)isTwitterAvailable;
 + (BOOL)isSocialAvailable;

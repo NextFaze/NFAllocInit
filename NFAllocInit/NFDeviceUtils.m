@@ -8,12 +8,16 @@
 
 #import "NFDeviceUtils.h"
 
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
+
 @implementation NFDeviceUtils
 
 + (BOOL)isOSAtLeastVersion:(float)osVersion
 {
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= osVersion)
-    {
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= osVersion) {
         return YES;
     }
     return NO;
@@ -28,13 +32,28 @@
     return [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad;
 }
 
++ (BOOL)is3_5inch
+{
+    if ([self isPad]) return NO;
+    return SCREEN_MAX_LENGTH == 480.0;
+}
+
 + (BOOL)is4inch
 {
     if ([self isPad]) return NO;
-    
-    CGRect bounds = [[UIScreen mainScreen] applicationFrame];
-    bool isScreen4Inch = bounds.size.height > 480;
-    return isScreen4Inch;
+    return SCREEN_MAX_LENGTH == 568.0;
+}
+
++ (BOOL)is4_7inch
+{
+    if ([self isPad]) return NO;
+    return SCREEN_MAX_LENGTH == 667.0;
+}
+
++ (BOOL)is5_5inch
+{
+    if ([self isPad]) return NO;
+    return SCREEN_MAX_LENGTH == 736.0;
 }
 
 + (BOOL)isSimulator
