@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 NextFaze SD. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface NFNetworkActivityIndicator : NSObject
 

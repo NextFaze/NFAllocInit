@@ -5,7 +5,7 @@
 //  Copyright (c) 2011 NextFaze. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface UIView (FrameAdjustments) 
 

@@ -4,7 +4,10 @@
 // No warranty is expressed or implied.
 
 // Extends the UIImage class to support resizing/cropping
+#import <UIKit/UIKit.h>
+
 @interface UIImage (Resize)
+
 - (UIImage *)croppedImage:(CGRect)bounds;
 - (UIImage *)thumbnailImage:(NSInteger)thumbnailSize
           transparentBorder:(NSUInteger)borderSize
@@ -20,4 +23,5 @@
            drawTransposed:(BOOL)transpose
      interpolationQuality:(CGInterpolationQuality)quality;
 - (CGAffineTransform)transformForOrientation:(CGSize)newSize;
+
 @end

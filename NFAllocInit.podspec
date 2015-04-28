@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         			= "NFAllocInit"
-  s.version      			= "1.0.7"
+  s.version      			= "1.0.8"
   s.summary      			= "Helper classes for iOS App development"
   s.description  			= <<-DESC
                    			  The starting point for an iOS app - helper classes and the like. 
