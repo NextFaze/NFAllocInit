@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C07E7B31AEF1F2500AEE97B /* UIImage+Orientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C07E7B21AEF1F2500AEE97B /* UIImage+Orientation.m */; };
 		7C08B028166DD01000012AA1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C08B027166DD01000012AA1 /* QuartzCore.framework */; };
 		7C08B02A166DD01F00012AA1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C08B029166DD01F00012AA1 /* CoreData.framework */; };
 		7C08B02C166DD02800012AA1 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C08B02B166DD02800012AA1 /* CoreImage.framework */; };
@@ -52,6 +53,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7C07E7B11AEF1F2500AEE97B /* UIImage+Orientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Orientation.h"; sourceTree = "<group>"; };
+		7C07E7B21AEF1F2500AEE97B /* UIImage+Orientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Orientation.m"; sourceTree = "<group>"; };
 		7C08B026166DCDE100012AA1 /* NFDebugging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFDebugging.h; sourceTree = "<group>"; };
 		7C08B027166DD01000012AA1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		7C08B029166DD01F00012AA1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -154,6 +157,8 @@
 				B5F72B8C17D863F50015D59C /* UIImage+NFAllocInit_Paths.m */,
 				B510A1FB17A213D2006E46E7 /* UIImage+NFAllocInit.h */,
 				B510A1FC17A213D2006E46E7 /* UIImage+NFAllocInit.m */,
+				7C07E7B11AEF1F2500AEE97B /* UIImage+Orientation.h */,
+				7C07E7B21AEF1F2500AEE97B /* UIImage+Orientation.m */,
 				7CAAE547166EB8EF0070636C /* UIImage+Resize.h */,
 				7CAAE548166EB8EF0070636C /* UIImage+Resize.m */,
 				7CAAE549166EB8EF0070636C /* UIImage+RoundedCorner.h */,
@@ -295,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C07E7B31AEF1F2500AEE97B /* UIImage+Orientation.m in Sources */,
 				7CEFCE37166DCDA400B0FB6A /* NFResourceUtils.m in Sources */,
 				7CEFCE38166DCDA400B0FB6A /* NFViewUtils.m in Sources */,
 				B5B1E811189F4D3C00E1F341 /* NFTimerTarget.m in Sources */,
