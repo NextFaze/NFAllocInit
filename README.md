@@ -6,7 +6,7 @@ The starting point for an iOS app - helper classes and the like. Add this to you
 
 ### Via CocoaPods
 
-    pod 'NFAllocInit', :git => 'https://github.com/NextFaze/NFAllocInit.git'
+    pod 'NFAllocInit'
 
 ### Via Submodules
 
