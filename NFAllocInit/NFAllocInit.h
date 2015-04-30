@@ -22,7 +22,6 @@
 #import "UIColor+NFAllocInit.h"
 #import "UIDevice+NFAllocInit.h"
 #import "UIImage+Alpha.h"
-#import "UIImage+NFAllocInit_Paths.h"
 #import "UIImage+NFAllocInit.h"
 #import "UIImage+Resize.h"
 #import "UIImage+RoundedCorner.h"
