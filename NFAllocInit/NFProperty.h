@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum  {
+typedef NS_ENUM(NSInteger, NFPropertyValueType) {
     NFPropertyValueTypeUnknown,
     NFPropertyValueTypeObject,
     NFPropertyValueTypePrimitive
-} NFPropertyValueType;
+};
 
-typedef enum {
+typedef NS_ENUM(NSInteger, NFPropertyDataType) {
     NFPropertyDataTypeUnknown,
     NFPropertyDataTypeInt,
     NFPropertyDataTypeUnsignedInt,
@@ -26,8 +26,8 @@ typedef enum {
     NFPropertyDataTypeUnsignedShort,
     NFPropertyDataTypeChar,
     NFPropertyDataTypeUnsignedChar,
-    NFPropertyDataTypeObject,
-} NFPropertyDataType;
+    NFPropertyDataTypeObject
+};
 
 @interface NFProperty : NSObject
 

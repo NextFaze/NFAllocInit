@@ -6,7 +6,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum {
+typedef NS_ENUM(NSInteger, FileType) {
     FileTypePNG,
     FileTypeJPG,
     FileTypeVideo,
@@ -15,7 +15,7 @@ typedef enum {
     FileTypeJson,
     FileTypeText,
     FileTypeUnknown
-} FileType;
+};
 
 @interface NFResourceUtils : NSObject
 
