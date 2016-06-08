@@ -16,6 +16,7 @@
 
 #import "NSArray+NFAllocInit.h"
 #import "NSData+NFAllocInit.h"
+#import "NSDate+NFAllocInit.h"
 #import "NSError+NFAllocInit.h"
 #import "NSObject+NFAllocInit_Properties.h"
 #import "NSString+NFAllocInit.h"
