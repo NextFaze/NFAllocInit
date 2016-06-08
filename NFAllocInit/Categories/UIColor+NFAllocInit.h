@@ -28,6 +28,8 @@
 - (UIColor *)colorByChangingAlphaTo:(CGFloat)newAlpha;
 - (UIColor *)colorByMuliplyingComponentsBy:(float)factor;
 
+- (UIColor *)colorByLerpingToColor:(UIColor *)targetColor delta:(float)delta;
+
 - (BOOL)getHue:(nullable CGFloat *)hue saturation:(nullable CGFloat *)saturation luminance:(nullable CGFloat *)luminance alpha:(nullable CGFloat *)alpha;
 - (BOOL)getCyan:(nullable CGFloat *)cyan magenta:(nullable CGFloat *)magenta yellow:(nullable CGFloat *)yellow key:(nullable CGFloat *)key alpha:(nullable CGFloat *)alpha;
 

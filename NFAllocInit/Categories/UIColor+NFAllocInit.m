@@ -286,6 +286,19 @@
 	return retColor;
 }
 
+- (UIColor *)colorByLerpingToColor:(UIColor *)targetColor delta:(float)delta
+{
+    CGFloat srcHue, srcSaturation, srcBrightness, srcAlpha, destHue, destSaturation, destBrightness, destAlpha;
+    if (![self getHue:&srcHue saturation:&srcSaturation brightness:&srcBrightness alpha:&srcAlpha])
+        return self;
+    if (![targetColor getHue:&destHue saturation:&destSaturation brightness:&destBrightness alpha:&destAlpha])
+        return self;
+    return [UIColor colorWithHue:srcHue + (destHue - srcHue) * delta
+                      saturation:srcSaturation + (destSaturation - srcSaturation) * delta
+                      brightness:srcBrightness + (destBrightness - srcBrightness) * delta
+                           alpha:srcAlpha + (destAlpha - srcAlpha) * delta];
+}
+
 - (BOOL)getHue:(nullable CGFloat *)hue saturation:(nullable CGFloat *)saturation luminance:(nullable CGFloat *)luminance alpha:(nullable CGFloat *)alpha
 {
     CGFloat r = 0, g = 0, b = 0, a = 0;
