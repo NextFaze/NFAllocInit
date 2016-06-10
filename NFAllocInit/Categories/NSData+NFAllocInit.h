@@ -5,6 +5,7 @@
 //  Copyright 2012 NextFaze. All rights reserved.
 //
 
+NS_ASSUME_NONNULL_BEGIN
 
 @interface NSData (NFAllocInit)
 
@@ -13,3 +14,5 @@
 - (NSString *)hexadecimal;
 
 @end
+
+NS_ASSUME_NONNULL_END

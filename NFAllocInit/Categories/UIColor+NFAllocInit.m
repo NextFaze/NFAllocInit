@@ -12,7 +12,7 @@
 
 @implementation UIColor (NFAllocInit)
 
-+ (UIColor *) colorForHex:(NSString *)hexColor {
++ (nonnull UIColor *) colorForHex:(nonnull NSString *)hexColor {
     CGFloat alpha = 1.0f;
     if(hexColor.length>7) {
         NSRange range = {hexColor.length-2,2};
@@ -32,7 +32,7 @@
 }
 
 
-+ (UIColor *) colorForHex:(NSString *)hexColor alpha:(CGFloat)alpha {
++ (nonnull UIColor *) colorForHex:(nonnull NSString *)hexColor alpha:(CGFloat)alpha {
 	hexColor = [[hexColor stringByTrimmingCharactersInSet:
 				 [NSCharacterSet whitespaceAndNewlineCharacterSet]
 				 ] uppercaseString];
@@ -71,11 +71,11 @@
                            alpha:alpha];
 }
 
-+ (UIColor *) colorWithHue:(CGFloat)hue saturation:(CGFloat)saturation luminance:(CGFloat)luminance {
++ (nonnull UIColor *) colorWithHue:(CGFloat)hue saturation:(CGFloat)saturation luminance:(CGFloat)luminance {
     return [UIColor colorWithHue:hue saturation:saturation luminance:luminance alpha:1.0];
 }
 
-+ (UIColor *) colorWithHue:(CGFloat)hue saturation:(CGFloat)saturation luminance:(CGFloat)luminance alpha:(CGFloat)alpha {
++ (nonnull UIColor *) colorWithHue:(CGFloat)hue saturation:(CGFloat)saturation luminance:(CGFloat)luminance alpha:(CGFloat)alpha {
     CGFloat h = CLAMP(hue, 0, 1) * 6;
     CGFloat s = CLAMP(saturation, 0, 1);
     CGFloat l = CLAMP(luminance, 0, 1);
@@ -107,11 +107,11 @@
     return [UIColor colorWithRed:r green:g blue:b alpha:CLAMP(alpha, 0, 1)];
 }
 
-+ (UIColor *) colorWithCyan:(CGFloat)cyan magenta:(CGFloat)magenta yellow:(CGFloat)yellow key:(CGFloat)key {
++ (nonnull UIColor *) colorWithCyan:(CGFloat)cyan magenta:(CGFloat)magenta yellow:(CGFloat)yellow key:(CGFloat)key {
     return [UIColor colorWithCyan:cyan magenta:magenta yellow:yellow key:key alpha:1.0];
 }
 
-+ (UIColor *) colorWithCyan:(CGFloat)cyan magenta:(CGFloat)magenta yellow:(CGFloat)yellow key:(CGFloat)key alpha:(CGFloat)alpha {
++ (nonnull UIColor *) colorWithCyan:(CGFloat)cyan magenta:(CGFloat)magenta yellow:(CGFloat)yellow key:(CGFloat)key alpha:(CGFloat)alpha {
     CGFloat k = CLAMP(key, 0, 1);
     CGFloat r = 1 - MIN(1, CLAMP(cyan, 0, 1) * (1 - k) + k);
     CGFloat g = 1 - MIN(1, CLAMP(magenta, 0, 1) * (1 - k) + k);
@@ -119,7 +119,7 @@
     return [UIColor colorWithRed:r green:g blue:b alpha:CLAMP(alpha, 0, 1)];
 }
 
-- (NSString*)hexValue {
+- (nonnull NSString *)hexValue {
     CGColorRef color = [self CGColor];
     NSString *titleColour = nil;
     
@@ -137,7 +137,7 @@
     return titleColour;
 }
 
-- (NSString*)hexValueWithAlpha {
+- (nonnull NSString *)hexValueWithAlpha {
     CGColorRef color = [self CGColor];
     NSString *titleColour = nil;
     
@@ -155,13 +155,13 @@
     return titleColour;
 }
 
-- (UIColor *)colorByFadingColor {
+- (nonnull UIColor *)colorByFadingColor {
     return [self colorByMuliplyingComponentsBy:2];
 }
 
 #define WHITEN_COMPONENT(c, factor) (c + (1.0 - c) * factor)
 
-- (UIColor *)colorByWhiteningColorBy:(float)factor {
+- (nonnull UIColor *)colorByWhiteningColorBy:(float)factor {
     // oldComponents is the array INSIDE the original color
 	// changing these changes the original, so we copy it
 	CGFloat *oldComponents = (CGFloat *)CGColorGetComponents([self CGColor]);
@@ -201,11 +201,11 @@
 	return retColor;
 }
 
-- (UIColor *)colorByDarkeningColor {
+- (nonnull UIColor *)colorByDarkeningColor {
     return [self colorByMuliplyingComponentsBy:0.7];
 }
 
-- (UIColor *)colorByMuliplyingComponentsBy:(float)factor
+- (nonnull UIColor *)colorByMuliplyingComponentsBy:(float)factor
 {
 	// oldComponents is the array INSIDE the original color
 	// changing these changes the original, so we copy it
@@ -246,7 +246,7 @@
 	return retColor;
 }
 
-- (UIColor *)colorByChangingAlphaTo:(CGFloat)newAlpha;
+- (nonnull UIColor *)colorByChangingAlphaTo:(CGFloat)newAlpha;
 {
 	// oldComponents is the array INSIDE the original color
 	// changing these changes the original, so we copy it
@@ -286,7 +286,7 @@
 	return retColor;
 }
 
-- (UIColor *)colorByLerpingToColor:(UIColor *)targetColor delta:(float)delta
+- (nonnull UIColor *)colorByLerpingToColor:(nonnull UIColor *)targetColor delta:(float)delta
 {
     CGFloat srcHue, srcSaturation, srcBrightness, srcAlpha, destHue, destSaturation, destBrightness, destAlpha;
     if (![self getHue:&srcHue saturation:&srcSaturation brightness:&srcBrightness alpha:&srcAlpha])

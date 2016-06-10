@@ -17,6 +17,8 @@ typedef NS_ENUM(NSInteger, FileType) {
     FileTypeUnknown
 };
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NFResourceUtils : NSObject
 
 + (FileType)determineFileType:(NSString *)fileName;
@@ -24,7 +26,7 @@ typedef NS_ENUM(NSInteger, FileType) {
 + (UIImage *)loadImage:(NSString *)fileName;
 + (BOOL)deleteImage:(NSString *)fileName;
 
-+ (BOOL)fileExistsInMainBundle:(NSString *)fileName ofType:(NSString *)fileExtension;
++ (BOOL)fileExistsInMainBundle:(nullable NSString *)fileName ofType:(nullable NSString *)fileExtension;
 
 // expects a text file with on array entry per line
 + (NSArray *)arrayFromFile:(NSString *)fileName;
@@ -32,3 +34,5 @@ typedef NS_ENUM(NSInteger, FileType) {
 + (BOOL)isValidEmailAddress:(NSString *)emailAddress;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface UIImage (NFAllocInit)
 
 @property (nonatomic, readonly) CGFloat aspect;
@@ -15,3 +17,5 @@
 - (UIImage *)blurredImage;
 
 @end
+
+NS_ASSUME_NONNULL_END

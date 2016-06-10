@@ -11,6 +11,8 @@
 #define NFDateFormatISO_8601     @"yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'"
 #define NFDateFormatStandard    @"yyyy-MM-dd hh:mm:ss a"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NFDateUtils : NSObject
 
 + (NSString *)stringFromTimeInterval:(NSTimeInterval)timeInterval;
@@ -19,8 +21,9 @@
 + (NSString *)stringFromDate:(NSDate *)date withStyle:(NSDateFormatterStyle)style;
 + (NSString *)stringFromDate:(NSDate *)date withFormat:(NSString *)dateFormat;
 
-+ (NSDate *)dateFromString:(NSString *)string;
-+ (NSDate *)dateFromString:(NSString *)string withFormat:(NSString *)dateFormat;
-
++ (nullable NSDate *)dateFromString:(NSString *)string;
++ (nullable NSDate *)dateFromString:(NSString *)string withFormat:(NSString *)dateFormat;
 
 @end
+
+NS_ASSUME_NONNULL_END

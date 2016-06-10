@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface UIImage (Orientation)
 
 - (UIImage *)scaleAndRotateToMaxSize:(int)sizeInPixels;
 
 @end
+
+NS_ASSUME_NONNULL_END
