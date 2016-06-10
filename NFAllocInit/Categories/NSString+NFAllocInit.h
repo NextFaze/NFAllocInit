@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)md5;
 - (BOOL)isBlank;
 - (BOOL)isNotBlank;
+- (NSString *)trim;
+- (NSArray<NSString *> *)matchesForRegex:(NSString *)regex options:(NSRegularExpressionOptions)options;
 
 @end
 

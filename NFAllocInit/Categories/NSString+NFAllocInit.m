@@ -41,4 +41,22 @@
     return [[self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length] != 0;
 }
 
+- (NSString *)trim {
+    return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+}
+
+- (NSArray<NSString *> *)matchesForRegex:(NSString *)regexString options:(NSRegularExpressionOptions)options {
+    NSError *error = nil;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regexString options:options error:&error];
+    if (error == nil) {
+        NSArray<NSTextCheckingResult *> *result = [regex matchesInString:self options:0 range:NSMakeRange(0, self.length)];
+        NSArray<NSString *> *strings = [result map:^NSString *(NSTextCheckingResult *result) {
+            NSRange range = result.range;
+            return [self substringWithRange:range];
+        }];
+        return strings;
+    }
+    return [NSArray<NSString *> array];
+}
+
 @end
