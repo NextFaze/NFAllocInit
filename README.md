@@ -1,28 +1,21 @@
 # NFAllocInit
 
+[![Version](https://img.shields.io/cocoapods/v/NFAllocInit.svg?style=flat)](http://cocoapods.org/pods/NFAllocInit)
+[![License](https://img.shields.io/cocoapods/l/NFAllocInit.svg?style=flat)](http://cocoapods.org/pods/NFAllocInit)
+[![Platform](https://img.shields.io/cocoapods/p/NFAllocInit.svg?style=flat)](http://cocoapods.org/pods/NFAllocInit)
+
 The starting point for an iOS app - helper classes and the like. Add this to your project to have access to detailed logs, CGRect shortcuts, quick audio player, date parsers and other handy tidbits.
+
+For the spiritual successor to NFAllocInit, checkout [FazeKit](https://github.com/NextFaze/FazeKit) which is written in Swift.
 
 ## Integration instructions
 
-### Via CocoaPods
+NFAllocInit is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
 
-    pod 'NFAllocInit'
-
-### Via Submodules
-
-1. Add submodule to your project:
-
-    `$ git submodule add git@github.com:NextfazeSD/NFAllocInit.git ThirdParty/NFAllocInit`
-    
-2. Drag the NFAllocInit.xcodeproj project file from Finder to the ThirdParty folder in your project tree.
-3. Add `NFAllocInit` to target's Target Dependencies in Build Phases. 
-4. Add `libNFAllocInit.a` in Link Binary with Libraries.
-5. Also, in Link Binary with Libraries add `AVFoundation.framework` and `AudioToolbox.framework`.
-6. Add to other linker flags `-ObjC`.
-7. Add to header search paths `ThirdParty/` with recursive selected.
-
-Optionally, in your pre-compiled header (prefix.pch) add `#import "NFAllocInit.h"` to have access to all the classes throughout your project.
-
+```ruby
+pod "NFAllocInit"
+```
 
 ## Contact
 
