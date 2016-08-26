@@ -37,6 +37,7 @@
 		B5B1E811189F4D3C00E1F341 /* NFTimerTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B1E810189F4D3C00E1F341 /* NFTimerTarget.m */; };
 		B5DC3EB118B59EC2004CBEF0 /* NFProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC3EB018B59EC2004CBEF0 /* NFProperty.m */; };
 		B5DC3EB418B5A006004CBEF0 /* NSObject+NFAllocInit_Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC3EB318B5A006004CBEF0 /* NSObject+NFAllocInit_Properties.m */; };
+		C2E30E4F1D0A4A0C00F0CEC8 /* NSDate+NFAllocInit.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E30E4E1D0A4A0C00F0CEC8 /* NSDate+NFAllocInit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -111,6 +112,8 @@
 		B5DC3EB018B59EC2004CBEF0 /* NFProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFProperty.m; sourceTree = "<group>"; };
 		B5DC3EB218B5A006004CBEF0 /* NSObject+NFAllocInit_Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NFAllocInit_Properties.h"; sourceTree = "<group>"; };
 		B5DC3EB318B5A006004CBEF0 /* NSObject+NFAllocInit_Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NFAllocInit_Properties.m"; sourceTree = "<group>"; };
+		C2E30E4D1D0A4A0C00F0CEC8 /* NSDate+NFAllocInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+NFAllocInit.h"; sourceTree = "<group>"; };
+		C2E30E4E1D0A4A0C00F0CEC8 /* NSDate+NFAllocInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NFAllocInit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +141,8 @@
 				7CAAE540166EB8EF0070636C /* NSArray+NFAllocInit.m */,
 				7CAAE541166EB8EF0070636C /* NSData+NFAllocInit.h */,
 				7CAAE542166EB8EF0070636C /* NSData+NFAllocInit.m */,
+				C2E30E4D1D0A4A0C00F0CEC8 /* NSDate+NFAllocInit.h */,
+				C2E30E4E1D0A4A0C00F0CEC8 /* NSDate+NFAllocInit.m */,
 				7CABC8D717D6AEB0004C338D /* NSError+NFAllocInit.h */,
 				7CABC8D817D6AEB0004C338D /* NSError+NFAllocInit.m */,
 				B5DC3EB218B5A006004CBEF0 /* NSObject+NFAllocInit_Properties.h */,
@@ -307,6 +312,7 @@
 				7CAAE552166EB8EF0070636C /* UIImage+Alpha.m in Sources */,
 				7CAAE553166EB8EF0070636C /* UIImage+Resize.m in Sources */,
 				7CAAE554166EB8EF0070636C /* UIImage+RoundedCorner.m in Sources */,
+				C2E30E4F1D0A4A0C00F0CEC8 /* NSDate+NFAllocInit.m in Sources */,
 				7CAAE555166EB8EF0070636C /* UIView+Additions.m in Sources */,
 				7CAAE556166EB8EF0070636C /* UIView+FrameAdjustments.m in Sources */,
 				7C3B52DA1ABA4B1900D78320 /* NFNetworkActivityIndicator.m in Sources */,

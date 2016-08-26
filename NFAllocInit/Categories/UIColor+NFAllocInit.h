@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface UIColor (NFAllocInit)
 
 + (UIColor *)colorForHex:(NSString *)hexColor;
@@ -34,3 +36,5 @@
 - (BOOL)getCyan:(nullable CGFloat *)cyan magenta:(nullable CGFloat *)magenta yellow:(nullable CGFloat *)yellow key:(nullable CGFloat *)key alpha:(nullable CGFloat *)alpha;
 
 @end
+
+NS_ASSUME_NONNULL_END
