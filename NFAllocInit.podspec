@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.homepage     			= "https://github.com/NextFaze/NFAllocInit"
   s.license      			= 'Apache 2.0'
   s.authors                 = { 'Ric Santos' => 'rics@ntos.me',
-                                'Andy J' => 'awilliams@nextfaze.com'
+                                'Andy J' => 'awilliams@nextfaze.com',
                                 'Shane Woolcock' => 'samahnub@gmail.com' }
 
   s.platform     			= :ios, "6.0"
