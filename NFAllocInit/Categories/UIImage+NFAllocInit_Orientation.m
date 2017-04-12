@@ -1,12 +1,12 @@
 //
-//  UIImage+Orientation.m
+//  UIImage+NFAllocInit_Orientation.m
 //  iQNECT
 //
 //  Created by Ricardo Santos on 15/05/2014.
 //  Copyright (c) 2014 NextFaze Pty Ltd. All rights reserved.
 //
 
-#import "UIImage+Orientation.h"
+#import "UIImage+NFAllocInit_Orientation.h"
 
 @implementation UIImage (Orientation)
 

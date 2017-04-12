@@ -1,12 +1,12 @@
-// UIImage+RoundedCorner.m
+// UIImage+NFAllocInit_RoundedCorner.m
 // Created by Trevor Harmon on 9/20/09.
 // Free for personal or commercial use, with or without modification.
 // No warranty is expressed or implied.
 
-#import "UIImage+RoundedCorner.h"
-#import "UIImage+Alpha.h"
+#import "UIImage+NFAllocInit_RoundedCorner.h"
+#import "UIImage+NFAllocInit_Alpha.h"
 
-@implementation UIImage (RoundedCorner)
+@implementation UIImage (NFAllocInit_RoundedCorner)
 
 // Creates a copy of this image with rounded corners
 // If borderSize is non-zero, a transparent border of the given size will also be added

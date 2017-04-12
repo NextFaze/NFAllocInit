@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7C07E7B31AEF1F2500AEE97B /* UIImage+Orientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C07E7B21AEF1F2500AEE97B /* UIImage+Orientation.m */; };
+		7C07E7B31AEF1F2500AEE97B /* UIImage+NFAllocInit_Orientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C07E7B21AEF1F2500AEE97B /* UIImage+NFAllocInit_Orientation.m */; };
 		7C08B028166DD01000012AA1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C08B027166DD01000012AA1 /* QuartzCore.framework */; };
 		7C08B02A166DD01F00012AA1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C08B029166DD01F00012AA1 /* CoreData.framework */; };
 		7C08B02C166DD02800012AA1 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C08B02B166DD02800012AA1 /* CoreImage.framework */; };
@@ -21,11 +21,11 @@
 		7CAAE54F166EB8EF0070636C /* NSArray+NFAllocInit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE540166EB8EF0070636C /* NSArray+NFAllocInit.m */; };
 		7CAAE550166EB8EF0070636C /* NSData+NFAllocInit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE542166EB8EF0070636C /* NSData+NFAllocInit.m */; };
 		7CAAE551166EB8EF0070636C /* NSString+NFAllocInit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE544166EB8EF0070636C /* NSString+NFAllocInit.m */; };
-		7CAAE552166EB8EF0070636C /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE546166EB8EF0070636C /* UIImage+Alpha.m */; };
-		7CAAE553166EB8EF0070636C /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE548166EB8EF0070636C /* UIImage+Resize.m */; };
-		7CAAE554166EB8EF0070636C /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE54A166EB8EF0070636C /* UIImage+RoundedCorner.m */; };
-		7CAAE555166EB8EF0070636C /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE54C166EB8EF0070636C /* UIView+Additions.m */; };
-		7CAAE556166EB8EF0070636C /* UIView+FrameAdjustments.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE54E166EB8EF0070636C /* UIView+FrameAdjustments.m */; };
+		7CAAE552166EB8EF0070636C /* UIImage+NFAllocInit_Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE546166EB8EF0070636C /* UIImage+NFAllocInit_Alpha.m */; };
+		7CAAE553166EB8EF0070636C /* UIImage+NFAllocInit_Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE548166EB8EF0070636C /* UIImage+NFAllocInit_Resize.m */; };
+		7CAAE554166EB8EF0070636C /* UIImage+NFAllocInit_RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE54A166EB8EF0070636C /* UIImage+NFAllocInit_RoundedCorner.m */; };
+		7CAAE555166EB8EF0070636C /* UIView+NFAllocInit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE54C166EB8EF0070636C /* UIView+NFAllocInit.m */; };
+		7CAAE556166EB8EF0070636C /* UIView+NFAllocInit_FrameAdjustments.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAE54E166EB8EF0070636C /* UIView+NFAllocInit_FrameAdjustments.m */; };
 		7CABC8D917D6AEB0004C338D /* NSError+NFAllocInit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CABC8D817D6AEB0004C338D /* NSError+NFAllocInit.m */; };
 		7CABC8DC17D6B35E004C338D /* NFDelegateSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CABC8DB17D6B35D004C338D /* NFDelegateSet.m */; };
 		7CEFCDC2166DCB7500B0FB6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CEFCDC1166DCB7500B0FB6A /* Foundation.framework */; };
@@ -53,8 +53,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7C07E7B11AEF1F2500AEE97B /* UIImage+Orientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Orientation.h"; sourceTree = "<group>"; };
-		7C07E7B21AEF1F2500AEE97B /* UIImage+Orientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Orientation.m"; sourceTree = "<group>"; };
+		7C07E7B11AEF1F2500AEE97B /* UIImage+NFAllocInit_Orientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+NFAllocInit_Orientation.h"; sourceTree = "<group>"; };
+		7C07E7B21AEF1F2500AEE97B /* UIImage+NFAllocInit_Orientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+NFAllocInit_Orientation.m"; sourceTree = "<group>"; };
 		7C08B026166DCDE100012AA1 /* NFDebugging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFDebugging.h; sourceTree = "<group>"; };
 		7C08B027166DD01000012AA1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		7C08B029166DD01F00012AA1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -78,16 +78,16 @@
 		7CAAE542166EB8EF0070636C /* NSData+NFAllocInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+NFAllocInit.m"; sourceTree = "<group>"; };
 		7CAAE543166EB8EF0070636C /* NSString+NFAllocInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NFAllocInit.h"; sourceTree = "<group>"; };
 		7CAAE544166EB8EF0070636C /* NSString+NFAllocInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NFAllocInit.m"; sourceTree = "<group>"; };
-		7CAAE545166EB8EF0070636C /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
-		7CAAE546166EB8EF0070636C /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
-		7CAAE547166EB8EF0070636C /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
-		7CAAE548166EB8EF0070636C /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
-		7CAAE549166EB8EF0070636C /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
-		7CAAE54A166EB8EF0070636C /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
-		7CAAE54B166EB8EF0070636C /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
-		7CAAE54C166EB8EF0070636C /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
-		7CAAE54D166EB8EF0070636C /* UIView+FrameAdjustments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameAdjustments.h"; sourceTree = "<group>"; };
-		7CAAE54E166EB8EF0070636C /* UIView+FrameAdjustments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameAdjustments.m"; sourceTree = "<group>"; };
+		7CAAE545166EB8EF0070636C /* UIImage+NFAllocInit_Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+NFAllocInit_Alpha.h"; sourceTree = "<group>"; };
+		7CAAE546166EB8EF0070636C /* UIImage+NFAllocInit_Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+NFAllocInit_Alpha.m"; sourceTree = "<group>"; };
+		7CAAE547166EB8EF0070636C /* UIImage+NFAllocInit_Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+NFAllocInit_Resize.h"; sourceTree = "<group>"; };
+		7CAAE548166EB8EF0070636C /* UIImage+NFAllocInit_Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+NFAllocInit_Resize.m"; sourceTree = "<group>"; };
+		7CAAE549166EB8EF0070636C /* UIImage+NFAllocInit_RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+NFAllocInit_RoundedCorner.h"; sourceTree = "<group>"; };
+		7CAAE54A166EB8EF0070636C /* UIImage+NFAllocInit_RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+NFAllocInit_RoundedCorner.m"; sourceTree = "<group>"; };
+		7CAAE54B166EB8EF0070636C /* UIView+NFAllocInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NFAllocInit.h"; sourceTree = "<group>"; };
+		7CAAE54C166EB8EF0070636C /* UIView+NFAllocInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NFAllocInit.m"; sourceTree = "<group>"; };
+		7CAAE54D166EB8EF0070636C /* UIView+NFAllocInit_FrameAdjustments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NFAllocInit_FrameAdjustments.h"; sourceTree = "<group>"; };
+		7CAAE54E166EB8EF0070636C /* UIView+NFAllocInit_FrameAdjustments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NFAllocInit_FrameAdjustments.m"; sourceTree = "<group>"; };
 		7CAAE68F166F0E400070636C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		7CABC8D717D6AEB0004C338D /* NSError+NFAllocInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+NFAllocInit.h"; sourceTree = "<group>"; };
 		7CABC8D817D6AEB0004C338D /* NSError+NFAllocInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+NFAllocInit.m"; sourceTree = "<group>"; };
@@ -153,20 +153,20 @@
 				B539BA3617B0AC16005E3B2E /* UIColor+NFAllocInit.m */,
 				B5839367178B99EB002B7075 /* UIDevice+NFAllocInit.h */,
 				B5839368178B99EB002B7075 /* UIDevice+NFAllocInit.m */,
-				7CAAE545166EB8EF0070636C /* UIImage+Alpha.h */,
-				7CAAE546166EB8EF0070636C /* UIImage+Alpha.m */,
+				7CAAE545166EB8EF0070636C /* UIImage+NFAllocInit_Alpha.h */,
+				7CAAE546166EB8EF0070636C /* UIImage+NFAllocInit_Alpha.m */,
 				B510A1FB17A213D2006E46E7 /* UIImage+NFAllocInit.h */,
 				B510A1FC17A213D2006E46E7 /* UIImage+NFAllocInit.m */,
-				7C07E7B11AEF1F2500AEE97B /* UIImage+Orientation.h */,
-				7C07E7B21AEF1F2500AEE97B /* UIImage+Orientation.m */,
-				7CAAE547166EB8EF0070636C /* UIImage+Resize.h */,
-				7CAAE548166EB8EF0070636C /* UIImage+Resize.m */,
-				7CAAE549166EB8EF0070636C /* UIImage+RoundedCorner.h */,
-				7CAAE54A166EB8EF0070636C /* UIImage+RoundedCorner.m */,
-				7CAAE54B166EB8EF0070636C /* UIView+Additions.h */,
-				7CAAE54C166EB8EF0070636C /* UIView+Additions.m */,
-				7CAAE54D166EB8EF0070636C /* UIView+FrameAdjustments.h */,
-				7CAAE54E166EB8EF0070636C /* UIView+FrameAdjustments.m */,
+				7C07E7B11AEF1F2500AEE97B /* UIImage+NFAllocInit_Orientation.h */,
+				7C07E7B21AEF1F2500AEE97B /* UIImage+NFAllocInit_Orientation.m */,
+				7CAAE547166EB8EF0070636C /* UIImage+NFAllocInit_Resize.h */,
+				7CAAE548166EB8EF0070636C /* UIImage+NFAllocInit_Resize.m */,
+				7CAAE549166EB8EF0070636C /* UIImage+NFAllocInit_RoundedCorner.h */,
+				7CAAE54A166EB8EF0070636C /* UIImage+NFAllocInit_RoundedCorner.m */,
+				7CAAE54B166EB8EF0070636C /* UIView+NFAllocInit.h */,
+				7CAAE54C166EB8EF0070636C /* UIView+NFAllocInit.m */,
+				7CAAE54D166EB8EF0070636C /* UIView+NFAllocInit_FrameAdjustments.h */,
+				7CAAE54E166EB8EF0070636C /* UIView+NFAllocInit_FrameAdjustments.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -300,7 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C07E7B31AEF1F2500AEE97B /* UIImage+Orientation.m in Sources */,
+				7C07E7B31AEF1F2500AEE97B /* UIImage+NFAllocInit_Orientation.m in Sources */,
 				7CEFCE37166DCDA400B0FB6A /* NFResourceUtils.m in Sources */,
 				7CEFCE38166DCDA400B0FB6A /* NFViewUtils.m in Sources */,
 				B5B1E811189F4D3C00E1F341 /* NFTimerTarget.m in Sources */,
@@ -309,12 +309,12 @@
 				B5DC3EB118B59EC2004CBEF0 /* NFProperty.m in Sources */,
 				B5DC3EB418B5A006004CBEF0 /* NSObject+NFAllocInit_Properties.m in Sources */,
 				7CAAE551166EB8EF0070636C /* NSString+NFAllocInit.m in Sources */,
-				7CAAE552166EB8EF0070636C /* UIImage+Alpha.m in Sources */,
-				7CAAE553166EB8EF0070636C /* UIImage+Resize.m in Sources */,
-				7CAAE554166EB8EF0070636C /* UIImage+RoundedCorner.m in Sources */,
+				7CAAE552166EB8EF0070636C /* UIImage+NFAllocInit_Alpha.m in Sources */,
+				7CAAE553166EB8EF0070636C /* UIImage+NFAllocInit_Resize.m in Sources */,
+				7CAAE554166EB8EF0070636C /* UIImage+NFAllocInit_RoundedCorner.m in Sources */,
 				C2E30E4F1D0A4A0C00F0CEC8 /* NSDate+NFAllocInit.m in Sources */,
-				7CAAE555166EB8EF0070636C /* UIView+Additions.m in Sources */,
-				7CAAE556166EB8EF0070636C /* UIView+FrameAdjustments.m in Sources */,
+				7CAAE555166EB8EF0070636C /* UIView+NFAllocInit.m in Sources */,
+				7CAAE556166EB8EF0070636C /* UIView+NFAllocInit_FrameAdjustments.m in Sources */,
 				7C3B52DA1ABA4B1900D78320 /* NFNetworkActivityIndicator.m in Sources */,
 				7CA179D916F981D100841703 /* NFDateUtils.m in Sources */,
 				7C9F4216170A51FD00495EDA /* NFAudioPlayer.m in Sources */,

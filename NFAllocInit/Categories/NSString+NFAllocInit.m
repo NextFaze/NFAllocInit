@@ -1,5 +1,5 @@
 //
-//  NSString+Additions.m
+//  NSString+NFAllocInit.m
 //
 //  Created by Andreas Wulf on 4/10/12.
 //  Copyright (c) 2012 NextFaze. All rights reserved.

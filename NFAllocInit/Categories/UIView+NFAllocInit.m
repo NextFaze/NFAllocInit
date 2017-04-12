@@ -1,13 +1,13 @@
 //
-//  UIView+Additions.m
+//  UIView+NFAllocInit.m
 //
 //  Created by Andreas Wulf on 5/10/12.
 //  Copyright (c) 2012 NextFaze. All rights reserved.
 //
 
-#import "UIView+Additions.h"
+#import "UIView+NFAllocInit.h"
 
-@implementation UIView (Additions)
+@implementation UIView (NFAllocInit)
 
 - (void)printAllSubviews:(NSString*)indent
 {

@@ -1,7 +1,7 @@
 //
-//  NSArray+FTW.m
+//  NSArray+NFAllocInit.m
 //
-//  Created by Andrew Williams on 19/09/12.
+//  Created by Andrew Williams FTW on 19/09/12.
 //  Copyright (c) 2012 NextFaze. All rights reserved.
 //
 
