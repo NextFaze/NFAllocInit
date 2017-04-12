@@ -1,5 +1,5 @@
 //
-//  UIImage+Orientation.h
+//  UIImage+NFAllocInit_Orientation.h
 //  iQNECT
 //
 //  Created by Ricardo Santos on 15/05/2014.

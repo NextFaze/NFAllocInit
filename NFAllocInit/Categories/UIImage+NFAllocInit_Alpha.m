@@ -1,11 +1,11 @@
-// UIImage+Alpha.m
+// UIImage+NFAllocInit_Alpha.m
 // Created by Trevor Harmon on 9/20/09.
 // Free for personal or commercial use, with or without modification.
 // No warranty is expressed or implied.
 
-#import "UIImage+Alpha.h"
+#import "UIImage+NFAllocInit_Alpha.h"
 
-@implementation UIImage (Alpha)
+@implementation UIImage (NFAllocInit_Alpha)
 
 // Returns true if the image has an alpha layer
 - (BOOL)hasAlpha {

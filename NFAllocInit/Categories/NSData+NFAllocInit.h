@@ -1,5 +1,5 @@
 //
-//  NSData+Base64
+//  NSData+NFAllocInit.h
 //
 //  Created by Andreas Wulf.
 //  Copyright 2012 NextFaze. All rights reserved.

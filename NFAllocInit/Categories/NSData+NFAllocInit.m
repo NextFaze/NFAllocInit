@@ -1,5 +1,5 @@
 //
-//  NSData+NFAllocInit
+//  NSData+NFAllocInit.m
 //
 //  Created by Andreas Wulf.
 //  Copyright 2012 NextFaze. All rights reserved.

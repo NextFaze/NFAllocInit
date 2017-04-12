@@ -1,13 +1,13 @@
-// UIImage+Resize.m
+// UIImage+NFAllocInit_Resize.m
 // Created by Trevor Harmon on 8/5/09.
 // Free for personal or commercial use, with or without modification.
 // No warranty is expressed or implied.
 
-#import "UIImage+Resize.h"
-#import "UIImage+RoundedCorner.h"
-#import "UIImage+Alpha.h"
+#import "UIImage+NFAllocInit_Resize.h"
+#import "UIImage+NFAllocInit_RoundedCorner.h"
+#import "UIImage+NFAllocInit_Alpha.h"
 
-@implementation UIImage (Resize)
+@implementation UIImage (NFAllocInit_Resize)
 
 // Returns a copy of this image that is cropped to the given bounds.
 // The bounds will be adjusted using CGRectIntegral.

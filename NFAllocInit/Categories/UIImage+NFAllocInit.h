@@ -1,5 +1,5 @@
 //
-//  UIImage+NFAllocInit.h
+//  UIImage+NFAllocInit_NFAllocInit.h
 //  NFAllocInit
 //
 //  Created by Andrew Williams on 26/07/13.

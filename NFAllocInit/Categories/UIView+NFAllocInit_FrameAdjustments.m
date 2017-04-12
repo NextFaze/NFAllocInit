@@ -1,13 +1,13 @@
 //
-//  UIView+FrameAdjustments.m
+//  UIView+NFAllocInit_FrameAdjustments.m
 //
 //  Created by Andrew Williams on 2/12/11.
 //  Copyright (c) 2011 NextFaze. All rights reserved.
 //
 
-#import "UIView+FrameAdjustments.h"
+#import "UIView+NFAllocInit_FrameAdjustments.h"
 
-@implementation UIView (FrameAdjustments)
+@implementation UIView (NFAllocInit_FrameAdjustments)
 
 - (CGFloat)x {
     return self.frame.origin.x;
