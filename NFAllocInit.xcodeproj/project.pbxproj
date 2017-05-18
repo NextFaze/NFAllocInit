@@ -37,6 +37,7 @@
 		B5B1E811189F4D3C00E1F341 /* NFTimerTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B1E810189F4D3C00E1F341 /* NFTimerTarget.m */; };
 		B5DC3EB118B59EC2004CBEF0 /* NFProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC3EB018B59EC2004CBEF0 /* NFProperty.m */; };
 		B5DC3EB418B5A006004CBEF0 /* NSObject+NFAllocInit_Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC3EB318B5A006004CBEF0 /* NSObject+NFAllocInit_Properties.m */; };
+		C2235B6C1ECD37B70046262E /* UIBarButtonItem+NFAllocInit.m in Sources */ = {isa = PBXBuildFile; fileRef = C2235B6B1ECD37B70046262E /* UIBarButtonItem+NFAllocInit.m */; };
 		C2E30E4F1D0A4A0C00F0CEC8 /* NSDate+NFAllocInit.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E30E4E1D0A4A0C00F0CEC8 /* NSDate+NFAllocInit.m */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +113,8 @@
 		B5DC3EB018B59EC2004CBEF0 /* NFProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFProperty.m; sourceTree = "<group>"; };
 		B5DC3EB218B5A006004CBEF0 /* NSObject+NFAllocInit_Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NFAllocInit_Properties.h"; sourceTree = "<group>"; };
 		B5DC3EB318B5A006004CBEF0 /* NSObject+NFAllocInit_Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NFAllocInit_Properties.m"; sourceTree = "<group>"; };
+		C2235B6A1ECD37B70046262E /* UIBarButtonItem+NFAllocInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+NFAllocInit.h"; sourceTree = "<group>"; };
+		C2235B6B1ECD37B70046262E /* UIBarButtonItem+NFAllocInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+NFAllocInit.m"; sourceTree = "<group>"; };
 		C2E30E4D1D0A4A0C00F0CEC8 /* NSDate+NFAllocInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+NFAllocInit.h"; sourceTree = "<group>"; };
 		C2E30E4E1D0A4A0C00F0CEC8 /* NSDate+NFAllocInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NFAllocInit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +152,8 @@
 				B5DC3EB318B5A006004CBEF0 /* NSObject+NFAllocInit_Properties.m */,
 				7CAAE543166EB8EF0070636C /* NSString+NFAllocInit.h */,
 				7CAAE544166EB8EF0070636C /* NSString+NFAllocInit.m */,
+				C2235B6A1ECD37B70046262E /* UIBarButtonItem+NFAllocInit.h */,
+				C2235B6B1ECD37B70046262E /* UIBarButtonItem+NFAllocInit.m */,
 				B539BA3517B0AC16005E3B2E /* UIColor+NFAllocInit.h */,
 				B539BA3617B0AC16005E3B2E /* UIColor+NFAllocInit.m */,
 				B5839367178B99EB002B7075 /* UIDevice+NFAllocInit.h */,
@@ -321,6 +326,7 @@
 				7C1FE6B1171FC4330069499C /* NFDeviceUtils.m in Sources */,
 				B5839369178B99EB002B7075 /* UIDevice+NFAllocInit.m in Sources */,
 				B510A1FD17A213D2006E46E7 /* UIImage+NFAllocInit.m in Sources */,
+				C2235B6C1ECD37B70046262E /* UIBarButtonItem+NFAllocInit.m in Sources */,
 				B539BA3717B0AC16005E3B2E /* UIColor+NFAllocInit.m in Sources */,
 				7CABC8D917D6AEB0004C338D /* NSError+NFAllocInit.m in Sources */,
 				7CABC8DC17D6B35E004C338D /* NFDelegateSet.m in Sources */,
