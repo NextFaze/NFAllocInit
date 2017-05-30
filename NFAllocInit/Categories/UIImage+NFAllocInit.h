@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (UIImage *)blurredImage;
 - (UIImage *)blurredImageWithRadius:(CGFloat)radius;
+- (UIImage *)grayscaleImage;
 
 @end
 
