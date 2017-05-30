@@ -8,7 +8,7 @@
 
 #import "UIImage+NFAllocInit_Orientation.h"
 
-@implementation UIImage (Orientation)
+@implementation UIImage (NFAllocInit_Orientation)
 
 - (UIImage *)scaleAndRotateToMaxSize:(int)sizeInPixels
 {

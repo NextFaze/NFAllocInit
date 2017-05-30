@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIImage (Orientation)
+@interface UIImage (NFAllocInit_Orientation)
 
 - (UIImage *)scaleAndRotateToMaxSize:(int)sizeInPixels;
 
