@@ -16,6 +16,11 @@
 
 - (UIImage *)blurredImage
 {
+    return [self blurredImageWithRadius:15.0f];
+}
+
+- (UIImage *)blurredImageWithRadius:(CGFloat)radius
+{
     // create our blurred image
     CIContext *context = [CIContext contextWithOptions:nil];
     CIImage *inputImage = [CIImage imageWithCGImage:self.CGImage];
@@ -30,7 +35,7 @@
     // setting up Gaussian Blur (we could use one of many filters offered by Core Image)
     CIFilter *filter = [CIFilter filterWithName:@"CIGaussianBlur"];
     [filter setValue:clampedImage forKey:kCIInputImageKey];
-    [filter setValue:[NSNumber numberWithFloat:15.0f] forKey:@"inputRadius"];
+    [filter setValue:[NSNumber numberWithFloat:radius] forKey:@"inputRadius"];
     CIImage *result = [filter valueForKey:kCIOutputImageKey];
     
     // CIGaussianBlur has a tendency to shrink the image a little,

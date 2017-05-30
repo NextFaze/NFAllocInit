@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) CGFloat aspect;
 
 - (UIImage *)blurredImage;
+- (UIImage *)blurredImageWithRadius:(CGFloat)radius;
 
 @end
 
