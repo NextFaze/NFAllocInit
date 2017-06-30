@@ -7,16 +7,18 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 // informal NSComparisonMethods
 @protocol NFAllocInitComparisonMethods <NSObject>
-- (BOOL)isEqualTo:(id)object;
-- (BOOL)isGreaterThan:(id)object;
-- (BOOL)isLessThan:(id)object;
+- (BOOL)isEqualTo:(nullable id)object;
+- (BOOL)isGreaterThan:(nullable id)object;
+- (BOOL)isLessThan:(nullable id)object;
 @end
 
-typedef BOOL (^NFAllocInitTestBlock)(id object);
-typedef id (^NFAllocInitObjectBlock)(id object);
-typedef id<NFAllocInitComparisonMethods> (^NFAllocInitComparableObjectBlock)(id object);
+typedef BOOL (^NFAllocInitTestBlock)(id _Nullable object);
+typedef id _Nonnull (^NFAllocInitObjectBlock)(id object);
+typedef id<NFAllocInitComparisonMethods> _Nonnull (^NFAllocInitComparableObjectBlock)(id _Nullable object);
 
 @interface NSArray (NFAllocInit)
 - (id)objectAtIndexFTW:(NSUInteger)index;
@@ -28,10 +30,10 @@ typedef id<NFAllocInitComparisonMethods> (^NFAllocInitComparableObjectBlock)(id 
 - (NSArray *)collect:(NFAllocInitObjectBlock)block;
 - (NSArray *)map:(NFAllocInitObjectBlock)block;
 - (void)cycle:(int)count block:(NFAllocInitObjectBlock)block;
-- (id)detect:(NFAllocInitTestBlock)block;
-- (id)reject:(NFAllocInitTestBlock)block;
-- (id)find:(NFAllocInitTestBlock)block;
-- (id)findByKey:(NSString *)key value:(id)value;
+- (nullable id)detect:(NFAllocInitTestBlock)block;
+- (nullable id)reject:(NFAllocInitTestBlock)block;
+- (nullable id)find:(NFAllocInitTestBlock)block;
+- (nullable id)findByKey:(NSString *)key value:(id)value;
 - (NSArray *)findAll:(NFAllocInitTestBlock)block;
 - (NSArray *)select:(NFAllocInitTestBlock)block;
 - (NSArray *)first:(int)count;
@@ -42,4 +44,4 @@ typedef id<NFAllocInitComparisonMethods> (^NFAllocInitComparableObjectBlock)(id 
 
 @end
 
-
+NS_ASSUME_NONNULL_END

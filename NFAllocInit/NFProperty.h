@@ -29,6 +29,8 @@ typedef NS_ENUM(NSInteger, NFPropertyDataType) {
     NFPropertyDataTypeObject
 };
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NFProperty : NSObject
 
 @property (nonatomic, readonly) NSString *name;
@@ -51,3 +53,5 @@ typedef NS_ENUM(NSInteger, NFPropertyDataType) {
 + (NSDictionary *)propertiesDictionaryFromClass:(Class)klass;
 
 @end
+
+NS_ASSUME_NONNULL_END

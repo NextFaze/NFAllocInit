@@ -11,9 +11,11 @@ colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NFViewUtils : NSObject
 
-+ (void)showAlertWithTitle:(NSString *)title andMessage:(NSString *)message;
++ (void)showAlertWithTitle:(nullable NSString *)title andMessage:(nullable NSString *)message;
 + (void)showAlertWithError:(NSError *)error;
 
 + (void)printAvailableFonts;
@@ -37,3 +39,5 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 CGRect CalcRectWithBorder(CGRect rectInitial, int iBorderSize);
 CGRect CalcBoundsFromFrame(CGRect rectFrame);
 CGRect CalcRectBiggerThanRect(CGRect rectInitial, float dWidth, float dHeight);
+
+NS_ASSUME_NONNULL_END

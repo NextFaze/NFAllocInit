@@ -11,6 +11,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol NFTimerTargetDelegate <NSObject>
 - (void)handleTimer:(NSTimer *)timer;
 @end
@@ -18,6 +20,8 @@
 @interface NFTimerTarget : NSObject
 
 + (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)timeInterval target:(id<NFTimerTargetDelegate>)target repeats:(BOOL)repeats;
-+ (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)timeInterval target:(id<NFTimerTargetDelegate>)target userInfo:(NSDictionary *)userInfo repeats:(BOOL)repeats;
++ (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)timeInterval target:(id<NFTimerTargetDelegate>)target userInfo:(nullable NSDictionary *)userInfo repeats:(BOOL)repeats;
 
 @end
+
+NS_ASSUME_NONNULL_END

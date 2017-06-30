@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NSObject (NFAllocInit_Properties)
 
 // return a list of NFProperty objects
 + (NSArray *)properties;
 
 @end
+
+NS_ASSUME_NONNULL_END

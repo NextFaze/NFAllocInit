@@ -10,6 +10,6 @@
 
 @interface UIDevice (NFAllocInit)
 
-- (NSString *)identifier;
+- (nullable NSString *)identifier;
 
 @end

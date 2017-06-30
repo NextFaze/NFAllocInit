@@ -8,13 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
 
 @interface NFDelegateSet : NSObject {
 	NSMutableSet *set;  // delegate set
 }
 
-- (void)addDelegate:(id)delegate;
-- (void)removeDelegate:(id)delegate;
+- (void)addDelegate:(nullable id)delegate;
+- (void)removeDelegate:(nullable id)delegate;
 - (NSArray *)list;
 
 @end
+
+NS_ASSUME_NONNULL_END

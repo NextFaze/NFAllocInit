@@ -7,9 +7,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImage (RoundedCorner)
+NS_ASSUME_NONNULL_BEGIN
+
+@interface UIImage (NFAllocInit_RoundedCorner)
 
 - (UIImage *)roundedCornerImage:(NSInteger)cornerSize borderSize:(NSInteger)borderSize;
 - (void)addRoundedRectToPath:(CGRect)rect context:(CGContextRef)context ovalWidth:(CGFloat)ovalWidth ovalHeight:(CGFloat)ovalHeight;
 
 @end
+
+NS_ASSUME_NONNULL_END

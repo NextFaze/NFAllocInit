@@ -6,6 +6,8 @@
 // Extends the UIImage class to support resizing/cropping
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface UIImage (NFAllocInit_Resize)
 
 - (UIImage *)croppedImage:(CGRect)bounds;
@@ -25,3 +27,5 @@
 - (CGAffineTransform)transformForOrientation:(CGSize)newSize;
 
 @end
+
+NS_ASSUME_NONNULL_END
