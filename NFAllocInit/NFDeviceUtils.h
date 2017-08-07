@@ -17,6 +17,8 @@
 + (BOOL)is4inch;
 + (BOOL)is4_7inch;
 + (BOOL)is5_5inch;
++ (BOOL)is5_8inch;
++ (BOOL)isSmallPhone;
 + (BOOL)isSimulator;
 + (BOOL)isTwitterAvailable;
 + (BOOL)isSocialAvailable;

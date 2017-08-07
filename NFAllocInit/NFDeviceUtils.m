@@ -15,8 +15,7 @@
 
 @implementation NFDeviceUtils
 
-+ (BOOL)isOSAtLeastVersion:(float)osVersion
-{
++ (BOOL)isOSAtLeastVersion:(float)osVersion {
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= osVersion) {
         return YES;
     }
@@ -27,37 +26,40 @@
     return [[[UIDevice currentDevice] systemVersion] floatValue];
 }
 
-+ (BOOL)isPad
-{
++ (BOOL)isPad {
     return [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad;
 }
 
-+ (BOOL)is3_5inch
-{
++ (BOOL)is3_5inch {
     if ([self isPad]) return NO;
     return SCREEN_MAX_LENGTH == 480.0;
 }
 
-+ (BOOL)is4inch
-{
++ (BOOL)is4inch {
     if ([self isPad]) return NO;
     return SCREEN_MAX_LENGTH == 568.0;
 }
 
-+ (BOOL)is4_7inch
-{
++ (BOOL)is4_7inch {
     if ([self isPad]) return NO;
     return SCREEN_MAX_LENGTH == 667.0;
 }
 
-+ (BOOL)is5_5inch
-{
++ (BOOL)is5_5inch {
     if ([self isPad]) return NO;
     return SCREEN_MAX_LENGTH == 736.0;
 }
 
-+ (BOOL)isSimulator
-{
++ (BOOL)is5_8inch {
+    if ([self isPad]) return NO;
+    return SCREEN_MAX_LENGTH == 812.0;
+}
+
++ (BOOL)isSmallPhone {
+    return ([self is3_5inch] || [self is4inch]);
+}
+
++ (BOOL)isSimulator {
     BOOL isSimulator = NO;
 #if TARGET_IPHONE_SIMULATOR
     isSimulator = YES;
