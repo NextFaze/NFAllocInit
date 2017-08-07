@@ -50,6 +50,11 @@
     return SCREEN_MAX_LENGTH == 736.0;
 }
 
++ (BOOL)is5_8inch {
+    if ([self isPad]) return NO;
+    return SCREEN_MAX_LENGTH == 812.0;
+}
+
 + (BOOL)isSmallPhone {
     return ([self is3_5inch] || [self is4inch]);
 }
