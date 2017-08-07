@@ -50,6 +50,10 @@
     return SCREEN_MAX_LENGTH == 736.0;
 }
 
++ (BOOL)isSmallPhone {
+    return ([self is3_5inch] || [self is4inch]);
+}
+
 + (BOOL)isSimulator {
     BOOL isSimulator = NO;
 #if TARGET_IPHONE_SIMULATOR
