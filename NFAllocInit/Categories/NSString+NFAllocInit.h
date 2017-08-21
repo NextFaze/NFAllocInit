@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)trim;
 - (NSArray<NSString *> *)matchesForRegex:(NSString *)regex options:(NSRegularExpressionOptions)options;
 
++ (NSString *)randomAlphanumericStringWithLength:(NSInteger)length;
+
 @end
 
 NS_ASSUME_NONNULL_END
