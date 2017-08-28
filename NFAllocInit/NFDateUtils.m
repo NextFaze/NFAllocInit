@@ -43,7 +43,6 @@
     return string;
 }
 
-
 + (NSString *)stringFromDate:(NSDate *)date
 {
     return [NFDateUtils stringFromDate:date withFormat:NFDateFormatISO_8601];
@@ -85,6 +84,10 @@
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = dateFormat;
+    
+    NSTimeZone *timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
+    [formatter setTimeZone:timeZone];
+    
     NSDate *date = [formatter dateFromString:string];
     return date;
 }
