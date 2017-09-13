@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define NFDateFormatISO_8601     @"yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'"
+#define NFDateFormatISO_8601     @"yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'SSS'Z'"
 #define NFDateFormatStandard    @"yyyy-MM-dd hh:mm:ss a"
 
 NS_ASSUME_NONNULL_BEGIN
