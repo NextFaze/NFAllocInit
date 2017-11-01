@@ -41,5 +41,9 @@
     return nil;
 }
 
+- (void)sizeToFitCeiling {
+    CGSize size = [self sizeThatFits:self.bounds.size];
+    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, ceilf(size.width), ceilf(size.height));
+}
 
 @end

@@ -11,5 +11,6 @@
 
 - (void)printAllSubviews;
 - (nullable UIViewController *)findViewController;
+- (void)sizeToFitCeiling;
 
 @end
