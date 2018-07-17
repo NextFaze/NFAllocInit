@@ -20,9 +20,8 @@
 
 + (NSString *)stringFromTimeInterval:(NSTimeInterval)timeInterval
 {
-    NSUInteger time = (NSUInteger)timeInterval;
-    NSUInteger seconds = time % 60;
-    NSUInteger minutes = time / 60;
+    NSUInteger seconds = (NSUInteger)timeInterval;
+    NSUInteger minutes = seconds / 60;
     NSUInteger hours = minutes / 60;
     NSUInteger days = hours / 24;
     NSUInteger weeks = days / 7;
