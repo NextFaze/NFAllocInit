@@ -47,6 +47,33 @@
     return [NFDateUtils stringFromDate:date withFormat:NFDateFormatISO_8601];
 }
 
++ (NSString *)isoStyleStringFromTimeInterval:(NSTimeInterval)timeInterval displayingTimeUnitOptions:(TimeUnitOptions)timeUnitOptions
+{
+    NSUInteger time = (NSUInteger)timeInterval;
+    NSUInteger hours = time / 3600;
+    NSUInteger minutes = (time / 60) % 60;
+    NSUInteger seconds = time % 60;
+
+    NSString *string = @"";
+    if (timeUnitOptions & TimeUnitHours) {
+        string = [string stringByAppendingFormat:@"%lu", hours];
+    }
+    if (timeUnitOptions & TimeUnitMinutes) {
+        if (string.length > 0) {
+            string = [string stringByAppendingString:@":"];
+        }
+        string = [string stringByAppendingFormat:@"%ld", minutes];
+    }
+    if (timeUnitOptions & TimeUnitSeconds) {
+        if (string.length > 0) {
+            string = [string stringByAppendingString:@":"];
+        }
+        string = [string stringByAppendingFormat:@"%ld", seconds];
+    }
+    
+    return string;
+}
+
 + (NSString *)stringFromDate:(NSDate *)date withStyle:(NSDateFormatterStyle)style
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];

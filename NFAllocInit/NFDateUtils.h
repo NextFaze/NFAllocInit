@@ -15,7 +15,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NFDateUtils : NSObject
 
+typedef NS_OPTIONS(NSUInteger, TimeUnitOptions) {
+    TimeUnitSeconds = 1 << 0,
+    TimeUnitMinutes = 1 << 1,
+    TimeUnitHours = 1 << 2,
+};
+
 + (NSString *)stringFromTimeInterval:(NSTimeInterval)timeInterval;
++ (NSString *)isoStyleStringFromTimeInterval:(NSTimeInterval)timeInterval displayingTimeUnitOptions:(TimeUnitOptions)timeUnitOptions;
 
 + (NSString *)stringFromDate:(NSDate *)date;
 + (NSString *)stringFromDate:(NSDate *)date withStyle:(NSDateFormatterStyle)style;
