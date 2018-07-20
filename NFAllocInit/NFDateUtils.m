@@ -62,13 +62,13 @@
         if (string.length > 0) {
             string = [string stringByAppendingString:@":"];
         }
-        string = [string stringByAppendingFormat:@"%ld", minutes];
+        string = [string stringByAppendingFormat:@"%02ld", minutes];
     }
     if (timeUnitOptions & TimeUnitSeconds) {
         if (string.length > 0) {
             string = [string stringByAppendingString:@":"];
         }
-        string = [string stringByAppendingFormat:@"%ld", seconds];
+        string = [string stringByAppendingFormat:@"%02ld", seconds];
     }
     
     return string;
