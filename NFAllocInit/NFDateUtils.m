@@ -20,9 +20,8 @@
 
 + (NSString *)stringFromTimeInterval:(NSTimeInterval)timeInterval
 {
-    NSUInteger time = (NSUInteger)timeInterval;
-    NSUInteger seconds = time % 60;
-    NSUInteger minutes = time / 60;
+    NSUInteger seconds = (NSUInteger)timeInterval;
+    NSUInteger minutes = seconds / 60;
     NSUInteger hours = minutes / 60;
     NSUInteger days = hours / 24;
     NSUInteger weeks = days / 7;
@@ -43,10 +42,36 @@
     return string;
 }
 
-
 + (NSString *)stringFromDate:(NSDate *)date
 {
     return [NFDateUtils stringFromDate:date withFormat:NFDateFormatISO_8601];
+}
+
++ (NSString *)isoStyleStringFromTimeInterval:(NSTimeInterval)timeInterval displayingTimeUnitOptions:(TimeUnitOptions)timeUnitOptions
+{
+    NSUInteger time = (NSUInteger)timeInterval;
+    NSUInteger hours = time / 3600;
+    NSUInteger minutes = (time / 60) % 60;
+    NSUInteger seconds = time % 60;
+
+    NSString *string = @"";
+    if (timeUnitOptions & TimeUnitHours) {
+        string = [string stringByAppendingFormat:@"%lu", hours];
+    }
+    if (timeUnitOptions & TimeUnitMinutes) {
+        if (string.length > 0) {
+            string = [string stringByAppendingString:@":"];
+        }
+        string = [string stringByAppendingFormat:@"%02ld", minutes];
+    }
+    if (timeUnitOptions & TimeUnitSeconds) {
+        if (string.length > 0) {
+            string = [string stringByAppendingString:@":"];
+        }
+        string = [string stringByAppendingFormat:@"%02ld", seconds];
+    }
+    
+    return string;
 }
 
 + (NSString *)stringFromDate:(NSDate *)date withStyle:(NSDateFormatterStyle)style
@@ -85,6 +110,10 @@
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = dateFormat;
+    
+    NSTimeZone *timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
+    [formatter setTimeZone:timeZone];
+    
     NSDate *date = [formatter dateFromString:string];
     return date;
 }

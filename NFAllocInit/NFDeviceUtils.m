@@ -55,6 +55,20 @@
     return SCREEN_MAX_LENGTH == 812.0;
 }
 
++ (BOOL)is6_1inch {
+    if ([self isPad]) return NO;
+    return SCREEN_MAX_LENGTH == 896.0 && [UIScreen mainScreen].scale == 2.0;
+}
+
++ (BOOL)is6_5inch {
+    if ([self isPad]) return NO;
+    return SCREEN_MAX_LENGTH == 896.0 && [UIScreen mainScreen].scale == 3.0;
+}
+
++ (BOOL)hasNotch {
+    return [self is5_8inch] || [self is6_1inch] || [self is6_5inch];
+}
+
 + (BOOL)isSmallPhone {
     return ([self is3_5inch] || [self is4inch]);
 }
