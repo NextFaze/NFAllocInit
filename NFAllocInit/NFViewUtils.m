@@ -111,19 +111,6 @@
     NSLog(@"%@: width:%f height:%f", description, size.width, size.height);
 }
 
-+ (void)removeShadowsFromWebView:(UIWebView *)webView
-{
-    // Remove shadows
-    if ([[webView subviews] count] > 0) {
-        for (UIView* shadowView in [[[webView subviews] objectAtIndex:0] subviews]) {
-            [shadowView setHidden:YES];
-        }
-        
-        // unhide the last view so it is visible again because it has the content
-        [[[[[webView subviews] objectAtIndex:0] subviews] lastObject] setHidden:NO];
-    }
-}
-
 + (UIImage *)scaleAndRotateImage:(UIImage *)image toMaxSize:(int)maxSize
 {
     int kMaxResolution = maxSize;
