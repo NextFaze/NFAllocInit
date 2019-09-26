@@ -30,8 +30,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)logPoint:(CGPoint)point withDescription:(NSString*)description;
 + (void)logSize:(CGSize)size withDescription:(NSString*)description;
 
-+ (void)removeShadowsFromWebView:(UIWebView *)webView;
-
 + (UIImage *)scaleAndRotateImage:(UIImage *)image toMaxSize:(int)maxSize;
 
 @end
