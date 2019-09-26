@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         			= "NFAllocInit"
-  s.version      			= "1.1.4"
+  s.version      			= "1.1.5"
   s.summary      			= "Helper classes and categories for iOS App development"
   s.description  			= <<-DESC
                    			  The starting point for an iOS app - helper classes and the like. 
@@ -12,7 +12,8 @@ Pod::Spec.new do |s|
   s.license      			= 'Apache 2.0'
   s.authors                 = { 'Ric Santos' => 'rics@ntos.me',
                                 'Andy J' => 'awilliams@nextfaze.com',
-                                'Shane Woolcock' => 'samahnub@gmail.com' }
+                                'Shane Woolcock' => 'swoolcock@nextfaze.com',
+                                'Dan Silk' => 'dsilk@nextfaze.com' }
 
   s.platform     			= :ios, "6.0"
   s.source       			= { :git => "https://github.com/NextFaze/NFAllocInit.git", :tag => s.version.to_s }
